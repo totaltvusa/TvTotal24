@@ -7,6 +7,7 @@ Este archivo registra todos los cambios, desarrollos, arquitectura, actualizacio
 ## 📌 1. Información del Repositorio
 
 - **Repositorio en GitHub:** [`totaltvusa/TvTotal24`](https://github.com/totaltvusa/TvTotal24)
+- **Sitio Web en Producción (Vercel):** [`https://tvtotal24.vercel.app`](https://tvtotal24.vercel.app)
 - **Proyecto en Vercel:** [`totaltvusa/tvtotal24`](https://vercel.com/totaltvusa/tvtotal24) (ID: `prj_XyJk7jyfCA6zsJDBB29EHBqZfQGR`)
 - **Rama principal:** `main`
 - **Propietario / Organización:** `totaltvusa` (TotalTv USA Team)
@@ -27,6 +28,7 @@ Asegúrese de contar con Git instalado y autenticado con la cuenta `totaltvusa` 
 ```bash
 git clone git@github.com:totaltvusa/TvTotal24.git
 cd TvTotal24
+npm install
 ```
 
 **Opción alternativa (HTTPS con GitHub CLI o PAT):**
@@ -35,6 +37,7 @@ gh repo clone totaltvusa/TvTotal24
 # O directamente vía HTTPS:
 # git clone https://github.com/totaltvusa/TvTotal24.git
 cd TvTotal24
+npm install
 ```
 
 ### B. Rutina diaria de sincronización
@@ -46,6 +49,8 @@ Para evitar discrepancias o conflictos al alternar entre computadores:
    git pull origin main
    ```
 2. **Durante el desarrollo:**
+   - Para probar en local: `npm run dev`
+   - Para verificar tipos y compilación: `npm run build`
    - Registrar cualquier nuevo cambio relevante en la sección [Bitácora de Cambios](#-4-bitácora-de-cambios) de este archivo (`HISTORIAL.md`).
 3. **Al finalizar la sesión de trabajo:**
    ```bash
@@ -61,18 +66,65 @@ Para evitar discrepancias o conflictos al alternar entre computadores:
 
 ```text
 TvTotal24/
-├── .gitignore                     # Exclusiones de Git (entornos, dependencias, temporales)
-├── .vercel/                       # Configuración y enlace local del proyecto Vercel (ignorado en Git)
+├── .gitignore                     # Exclusiones de Git (node_modules, .vercel, dist, temporales)
+├── .vercel/                       # Configuración y enlace local del proyecto Vercel
 ├── HISTORIAL.md                   # Bitácora histórica, arquitectura y guía multidispositivo
 ├── README.md                      # Presentación e información general del proyecto
-└── Logo TvTotal24 Final.png       # Logotipo oficial en alta resolución del proyecto TvTotal24
+├── Logo TvTotal24 Final.png       # Logotipo oficial original en alta resolución
+├── index.html                     # HTML principal, SEO, fuentes y preloader animado
+├── package.json                   # Dependencias (React 18, Vite 5, Tailwind 3.4, Framer Motion)
+├── package-lock.json              # Árbol de dependencias bloqueado
+├── postcss.config.js              # Configuración de PostCSS y Tailwind
+├── tailwind.config.js             # Sistema de diseño, paleta verde neón y obsidiana
+├── tsconfig.json                  # Configuración raíz de TypeScript (referencias por proyecto)
+├── tsconfig.app.json              # Configuración de compilación de la aplicación cliente
+├── tsconfig.node.json             # Configuración de compilación para scripts de Node/Vite
+├── vite.config.ts                 # Configuración de Vite y alias de rutas (@/*)
+├── public/
+│   ├── images/                    # Assets gráficos, fondos, banners y logos (PNG y WebP)
+│   │   ├── logo.png               # Logo TvTotal24
+│   │   └── logo-transparent.png   # Logo TvTotal24 con transparencia
+│   └── robots.txt                 # Directivas de indexación para buscadores
+└── src/
+    ├── context/
+    │   └── ThemeContext.tsx       # Contexto para modo oscuro/claro con persistencia
+    ├── components/
+    │   ├── ContactModal.tsx       # Modal dual de contacto (WhatsApp / Messenger)
+    │   ├── Devices.tsx            # Sección interactiva de dispositivos y guías de app
+    │   ├── DynamicHeroCarousel.tsx# Carrusel de estrenos de películas y eventos deportivos
+    │   ├── EntertainmentFeatures.tsx # Pestañas de canales en vivo, cine, series e infantiles
+    │   ├── FAQ.tsx                # Preguntas frecuentes con acordeones interactivos
+    │   ├── FloatingWhatsApp.tsx   # Botón flotante directo para atención por WhatsApp
+    │   ├── Footer.tsx             # Pie de página con enlaces rápidos, redes y sellos
+    │   ├── FreeDemo.tsx           # Sección de solicitud de prueba gratuita de 24 horas
+    │   ├── Header.tsx             # Barra de navegación fija con menú móvil responsivo
+    │   ├── Hero.tsx               # Sección principal de bienvenida con estadísticas y CTA
+    │   ├── LegalPage.tsx          # Centro Legal (Privacidad, Términos y DMCA)
+    │   ├── Onboarding.tsx         # Los 3 pasos simples para comenzar
+    │   ├── Pricing.tsx            # Tarjetas de planes, selector de pantallas y adult toggle
+    │   ├── SocialIcons.tsx        # Iconos SVG de redes sociales (WhatsApp, Messenger, etc.)
+    │   ├── SocialSection.tsx      # Sección de comunidad y enlaces sociales
+    │   ├── Testimonials.tsx       # Reseñas verificadas de clientes
+    │   ├── ThemeToggle.tsx        # Botón para alternar tema visual
+    │   ├── WhatsAppIcon.tsx       # Icono SVG optimizado de WhatsApp
+    │   └── WhyChooseUs.tsx        # Sección de ventajas técnicas y servidores anti-buffering
+    ├── App.tsx                    # Enrutamiento de vistas (inicio y centro legal)
+    ├── data.ts                    # Constantes de contenido, planes, enlaces y traducciones
+    ├── index.css                  # Estilos globales, efectos de cristal y scrollbars
+    ├── main.tsx                   # Punto de entrada de React con StrictMode
+    └── vite-env.d.ts              # Declaraciones de tipos para variables de entorno Vite
 ```
 
 ---
 
 ## 📝 4. Bitácora de Cambios
 
-### [2026-10-16] - Adaptación y Construcción Integral del Sitio Web TvTotal24
+### [2026-10-16] - Adaptación y Construcción Integral del Sitio Web TvTotal24 y Despliegue en Producción
+
+#### 🚀 Despliegue a Producción:
+- **URL de Producción:** [`https://tvtotal24.vercel.app`](https://tvtotal24.vercel.app)
+- **Estado HTTP:** `200 OK` verificado mediante headers de respuesta en servidores globales de Vercel.
+- **CI/CD:** Cada `git push origin main` activa el proceso automático de compilación y despliegue en Vercel.
 
 #### 🎨 Resumen del Desarrollo:
 Se tomó como base la arquitectura y componentes de `TotalTvUSAwebsite`, adaptándolos y reconstruyéndolos por completo para **TvTotal24** de acuerdo con las especificaciones del usuario:
