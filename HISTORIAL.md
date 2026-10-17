@@ -7,8 +7,9 @@ Este archivo registra todos los cambios, desarrollos, arquitectura, actualizacio
 ## 📌 1. Información del Repositorio
 
 - **Repositorio en GitHub:** [`totaltvusa/TvTotal24`](https://github.com/totaltvusa/TvTotal24)
+- **Proyecto en Vercel:** [`totaltvusa/tvtotal24`](https://vercel.com/totaltvusa/tvtotal24) (ID: `prj_XyJk7jyfCA6zsJDBB29EHBqZfQGR`)
 - **Rama principal:** `main`
-- **Propietario / Organización:** `totaltvusa`
+- **Propietario / Organización:** `totaltvusa` (TotalTv USA Team)
 - **Fecha de inicialización:** Octubre 2026
 - **Propósito:** Hub y base de desarrollo para todas las iniciativas, servicios, assets y módulos relacionados con **TvTotal24**.
 
@@ -61,6 +62,7 @@ Para evitar discrepancias o conflictos al alternar entre computadores:
 ```text
 TvTotal24/
 ├── .gitignore                     # Exclusiones de Git (entornos, dependencias, temporales)
+├── .vercel/                       # Configuración y enlace local del proyecto Vercel (ignorado en Git)
 ├── HISTORIAL.md                   # Bitácora histórica, arquitectura y guía multidispositivo
 ├── README.md                      # Presentación e información general del proyecto
 └── Logo TvTotal24 Final.png       # Logotipo oficial en alta resolución del proyecto TvTotal24
@@ -69,6 +71,21 @@ TvTotal24/
 ---
 
 ## 📝 4. Bitácora de Cambios
+
+### [2026-10-16] - Creación del Proyecto en Vercel y Configuración de CI/CD
+
+#### 🚀 Acciones Realizadas:
+1. **Autenticación e Identificación en Vercel:**
+   - Vinculación de la CLI de Vercel con la cuenta `totaltvusa` (`TotalTv USA Team`).
+2. **Creación del Proyecto Vercel:**
+   - Creación del nuevo proyecto [`tvtotal24`](https://vercel.com/totaltvusa/tvtotal24) (ID: `prj_XyJk7jyfCA6zsJDBB29EHBqZfQGR`).
+3. **Vinculación Local y Control de Archivos:**
+   - Enlace del directorio de trabajo local con el proyecto en Vercel (`.vercel/project.json`).
+   - Actualización del archivo `.gitignore` para omitir `.vercel` y `.env*` garantizando la seguridad de tokens y configuraciones locales.
+4. **Integración con GitHub (CI/CD):**
+   - Configuración de la sincronización continua para que cada commit y push a la rama `main` en GitHub (`totaltvusa/TvTotal24`) active el despliegue automático en Vercel.
+
+---
 
 ### [2026-10-16] - Inicialización del Proyecto, Creación del Repositorio en GitHub y Documentación Base
 

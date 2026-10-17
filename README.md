@@ -14,6 +14,11 @@ Para consultar el registro completo de cambios, la arquitectura, y las instrucci
 
 👉 **[HISTORIAL.md](./HISTORIAL.md)**
 
+## ☁️ Despliegue y Vercel
+
+- **Dashboard Vercel:** [https://vercel.com/totaltvusa/tvtotal24](https://vercel.com/totaltvusa/tvtotal24)
+- **Repositorio GitHub:** [https://github.com/totaltvusa/TvTotal24](https://github.com/totaltvusa/TvTotal24)
+
 ## 🚀 Inicio Rápido
 
 ### Clonar el proyecto
