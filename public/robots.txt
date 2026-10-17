@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /my-account/
+
+Sitemap: https://totaltvusa.com/sitemap.xml

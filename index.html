@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    
+    <!-- Primary Meta Tags -->
+    <title>TvTotal24 | Televisión en Vivo, Deportes, Películas y Series 24/7</title>
+    <meta name="title" content="TvTotal24 | Televisión en Vivo, Deportes, Películas y Series 24/7" />
+    <meta name="description" content="Disfruta de más de 1.500 canales prémium en vivo, deportes en directo en Full HD/4K, y miles de películas y series actualizadas con TvTotal24. Compatible con Smart TV, Fire Stick, Android, iPhone y PC." />
+    <meta name="theme-color" content="#020604" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TvTotal24 | El Mejor Entretenimiento en Streaming" />
+    <meta property="og:description" content="Televisión prémium en vivo sin contratos ni cortes. Solicita tu demo gratis de TvTotal24 hoy mismo." />
+    <meta property="og:image" content="/images/logo.png" />
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Instant Lightweight Preloader */
+      #tvtotal24-preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #020604;
+        transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+      }
+      #tvtotal24-preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .preloader-glow {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .preloader-glow::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0, 230, 118, 0.4) 0%, transparent 70%);
+        animation: preloader-pulse 2s infinite ease-in-out;
+      }
+      .preloader-spinner {
+        width: 44px;
+        height: 44px;
+        border: 3px solid rgba(0, 230, 118, 0.15);
+        border-top-color: #00e676;
+        border-radius: 50%;
+        animation: preloader-spin 0.85s linear infinite;
+      }
+      @keyframes preloader-spin {
+        to { transform: rotate(360deg); }
+      }
+      @keyframes preloader-pulse {
+        0%, 100% { transform: scale(0.9); opacity: 0.5; }
+        50% { transform: scale(1.2); opacity: 1; }
+      }
+    </style>
+  </head>
+  <body class="bg-obsidian-950 text-slate-100 antialiased selection:bg-neon-electric selection:text-black">
+    <!-- Instant Fast Preloader -->
+    <div id="tvtotal24-preloader">
+      <div class="preloader-glow">
+        <div class="preloader-spinner"></div>
+      </div>
+      <p style="margin-top: 16px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #00e676; text-transform: uppercase;">
+        TvTotal24
+      </p>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
