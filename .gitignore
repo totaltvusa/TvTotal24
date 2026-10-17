@@ -40,3 +40,5 @@ env/
 *.log
 tmp/
 temp/
+.vercel
+.env*
