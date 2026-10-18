@@ -68,7 +68,8 @@ export type PricingPlan = {
   popular?: boolean;
   bestValue?: boolean;
   savingsBadge?: string;
-  binanceDiscountText: string;
+  binancePrice?: number;
+  binanceDiscountText?: string;
   features: string[];
 };
 
@@ -95,7 +96,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     badge: 'Flexibilidad Total',
     popular: false,
     bestValue: false,
-    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
+    binancePrice: 5,
+    binanceDiscountText: 'Con Binance solo $5 USD',
     features: UNIVERSAL_PLAN_FEATURES,
   },
   {
@@ -110,7 +112,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     popular: true,
     bestValue: false,
     savingsBadge: 'Ahorro Garantizado',
-    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
+    binancePrice: 14,
+    binanceDiscountText: 'Con Binance solo $14 USD',
     features: UNIVERSAL_PLAN_FEATURES,
   },
   {
@@ -125,7 +128,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     popular: false,
     bestValue: false,
     savingsBadge: 'Gran Ahorro Semestral',
-    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
     features: UNIVERSAL_PLAN_FEATURES,
   },
   {
@@ -140,7 +142,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     popular: false,
     bestValue: true,
     savingsBadge: 'Precio Más Bajo: $7/mes',
-    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
+    binancePrice: 50,
+    binanceDiscountText: 'Con Binance solo $50 USD',
     features: UNIVERSAL_PLAN_FEATURES,
   },
 ];

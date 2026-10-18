@@ -64,19 +64,19 @@ export default function Pricing() {
                 ¿Pagas con Binance? ¡Tienes un SÚPER Descuento!
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5">
-                Obtén un precio aún más rebajado al pagar tu suscripción a través de Binance. Consulta tu descuento especial al contratar.
+                Obtén precios especiales al pagar tu suscripción a través de Binance: 1 mes $5, 3 meses $14 y 12 meses $50.
               </p>
             </div>
           </div>
 
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero consultar el SUPER descuento pagando con Binance.')}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero comprar mi plan con descuento Binance.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-obsidian-950 font-black text-xs sm:text-sm uppercase tracking-wide hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)]"
           >
             <Zap size={15} className="fill-obsidian-950 text-obsidian-950" />
-            <span>Consultar Descuento Binance</span>
+            <span>Compra con descuento Binance</span>
           </a>
         </motion.div>
 
@@ -151,11 +151,13 @@ export default function Pricing() {
                       </span>
                     </div>
 
-                    {/* Binance Super Discount Callout Badge on Card */}
-                    <div className="mt-3 py-1.5 px-2.5 rounded-xl bg-amber-400/10 border border-amber-400/30 text-[11px] font-bold text-amber-800 dark:text-amber-300 flex items-center justify-center gap-1.5">
-                      <Zap size={13} className="text-amber-500 dark:text-amber-400 fill-amber-500 dark:fill-amber-400 shrink-0" />
-                      <span>¡SUPER Descuento con Binance!</span>
-                    </div>
+                    {/* Binance Discount Callout Badge on Card */}
+                    {plan.binancePrice ? (
+                      <div className="mt-3 py-1.5 px-2.5 rounded-xl bg-amber-400/10 border border-amber-400/30 text-[11px] font-bold text-amber-800 dark:text-amber-300 flex items-center justify-center gap-1.5">
+                        <Zap size={13} className="text-amber-500 dark:text-amber-400 fill-amber-500 dark:fill-amber-400 shrink-0" />
+                        <span>Con Binance solo <strong>${plan.binancePrice} USD</strong></span>
+                      </div>
+                    ) : null}
                   </div>
 
                   {/* Feature Checklist */}
