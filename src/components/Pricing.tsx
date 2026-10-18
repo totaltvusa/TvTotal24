@@ -64,7 +64,7 @@ export default function Pricing() {
                 ¿Pagas con Binance? ¡Tienes un SÚPER Descuento!
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5">
-                Obtén precios especiales al pagar tu suscripción a través de Binance: 1 mes $5, 3 meses $14 y 12 meses $50.
+                Obtén precios especiales al pagar tu suscripción a través de Binance: 1 mes $5, 3 meses $14, 6 meses $27 y 12 meses $50.
               </p>
             </div>
           </div>
@@ -123,17 +123,11 @@ export default function Pricing() {
                 )}
 
                 <div>
-                  {/* Plan Title & Devices Badge */}
+                  {/* Plan Title */}
                   <div className="mb-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-display font-extrabold text-xl text-slate-900 dark:text-white">
-                        {plan.name}
-                      </h3>
-                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-neon-electric/15 text-emerald-700 dark:text-neon-electric border border-emerald-500/30 dark:border-neon-electric/30 flex items-center gap-1">
-                        <Tv size={12} />
-                        3 Pantallas
-                      </span>
-                    </div>
+                    <h3 className="font-display font-extrabold text-xl text-slate-900 dark:text-white">
+                      {plan.name}
+                    </h3>
                     <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
                       {plan.billingSubtitle}
                     </span>
@@ -147,7 +141,7 @@ export default function Pricing() {
                         {plan.price}
                       </span>
                       <span className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase ml-1">
-                        USD {plan.periodLabel}
+                        USD
                       </span>
                     </div>
 
@@ -184,7 +178,7 @@ export default function Pricing() {
                       : 'bg-slate-900 text-white hover:bg-neon-electric hover:text-black dark:bg-white/10 dark:text-white dark:hover:bg-neon-electric dark:hover:text-black border border-transparent dark:border-white/15'
                   }`}
                 >
-                  <span>Contratar Plan</span>
+                  <span>Quiero este</span>
                   <ArrowRight size={16} />
                 </a>
               </motion.div>

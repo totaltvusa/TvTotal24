@@ -181,13 +181,16 @@ TvTotal24/
     - Se eliminó la exposición en texto plano del número telefónico (`+57 300 947 6271`) en toda la interfaz visible (Footer, FAQ, tarjetas de características, accesibilidad y sección de comunidad).
     - El número permanece integrado funcionalmente en los enlaces `https://wa.me/573009476271`, mostrándose en pantalla únicamente como *"WhatsApp Oficial"*, *"Chat y Atención 24/7"* o *"Atención por WhatsApp"*.
 
-17. **Precios Exactos con Descuento Binance y Retiro en Plan 6 Meses:**
-    - Incorporación de los precios con descuento exclusivo de Binance en las tarjetas de planes:
-      - **Plan 1 Mes:** Con Binance solo **$5 USD** (estándar $8 USD).
-      - **Plan 3 Meses:** Con Binance solo **$14 USD** (estándar $24 USD).
-      - **Plan 6 Meses:** Se retiró el recuadro de Binance (sin descuento).
-      - **Plan 12 Meses:** Con Binance solo **$50 USD** (estándar $84 USD).
+17. **Precios Exactos con Descuento Binance:**
+    - Incorporación de los precios con descuento exclusivo de Binance en las tarjetas de planes (1 mes $5 USD, 3 meses $14 USD, 6 meses $27 USD, 12 meses $50 USD).
     - Actualización del botón en el banner superior a *"Compra con descuento Binance"*, con enlace directo a WhatsApp.
+
+18. **Simplificación Visual de Tarjetas de Precios:**
+    - Se eliminó el desglose del costo mensual entre paréntesis en subtítulos y distintivos (ej. `($8/mes)` y `($7/mes)`).
+    - Se retiró la insignia de "3 Pantallas" junto al nombre del plan para eliminar redundancia con el primer ítem de beneficios.
+    - Se eliminaron las etiquetas de período (`/mes`, `/trimestre`, `/semestre`, `/año`) del bloque de precio, exhibiendo solo el monto neto en dólares (`$ 8 USD`, `$ 24 USD`, etc.).
+    - Se actualizaron todos los botones de compra de *"Contratar Plan"* a **"Quiero este"**.
+    - Se añadió al **Plan 6 Meses** la oferta especial de Binance a solo **$27 USD** (estándar $48 USD).
 
 ---
 
