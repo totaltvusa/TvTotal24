@@ -175,16 +175,16 @@ export default function DynamicHeroCarousel({
               muted
               loop
               playsInline
-              className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+              className="w-full h-full object-contain bg-black"
             />
           ) : (
             <img
               src={currentMedia}
               alt={altText}
               fetchPriority="high"
-              className="w-full h-full object-cover rounded-2xl sm:rounded-3xl"
+              className="w-full h-full object-cover bg-black"
               width="800"
-              height="500"
+              height="450"
             />
           )}
         </motion.div>

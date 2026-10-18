@@ -13,10 +13,10 @@ export default function FloatingWhatsApp() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-neon-electric/40 text-xs font-bold text-white shadow-2xl hover:border-neon-electric hover:shadow-neon-glow transition-all backdrop-blur-xl group"
+        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-emerald-500/40 dark:border-neon-electric/40 text-xs font-bold text-slate-800 dark:text-white shadow-2xl hover:border-emerald-500 dark:hover:border-neon-electric hover:shadow-neon-glow transition-all backdrop-blur-xl group"
       >
-        <span className="w-2 h-2 rounded-full bg-neon-electric animate-pulse" />
-        <span className="group-hover:text-neon-electric transition-colors">¿Dudas? Chatea con nosotros</span>
+        <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-neon-electric animate-pulse" />
+        <span className="group-hover:text-emerald-600 dark:group-hover:text-neon-electric transition-colors">¿Dudas? Chatea con nosotros</span>
       </motion.a>
 
       {/* Floating WhatsApp Action Button */}

@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <section id="why-us" className="relative py-12 sm:py-16 bg-obsidian-950 overflow-hidden">
+    <section id="why-us" className="relative py-12 sm:py-16 bg-transparent dark:bg-obsidian-950 overflow-hidden">
       {/* Subtle radial lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-neon-electric/10 rounded-full blur-[170px] pointer-events-none" />
 
@@ -40,14 +40,14 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass border border-neon-electric/30 text-xs font-bold tracking-widest text-neon-electric uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass border border-neon-electric/30 text-xs font-bold tracking-widest text-emerald-600 dark:text-neon-electric uppercase mb-3">
             <Sparkles size={12} />
-            Ventajas Exclusivas
+            Beneficios y Ventajas
           </div>
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white tracking-tight">
             ¿Por Qué Elegir <span className="text-gradient">TvTotal24</span>?
           </h2>
-          <p className="mt-3 text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="mt-3 text-slate-600 dark:text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
             Reúne tus películas, series completas, canales de televisión en vivo y los deportes más intensos en un solo servicio confiable con calidad 4K UHD.
           </p>
 
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
           <div className="mt-6 flex justify-center">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full glass border border-neon-electric/30 hover:border-neon-electric text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition-all shadow-md group"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full glass border border-slate-300 dark:border-neon-electric/30 hover:border-emerald-500 dark:hover:border-neon-electric text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-white transition-all shadow-sm dark:shadow-md group"
             >
               <span>{expanded ? 'Ver Menos Beneficios' : 'Ver Todos los Beneficios'}</span>
               <motion.div
@@ -87,35 +87,35 @@ export default function WhyChooseUs() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.35, delay: idx * 0.04 }}
-                      className="group relative rounded-3xl glass-card p-7 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+                      className="group relative rounded-3xl glass-card p-7 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between border border-slate-200 dark:border-neon-electric/18"
                     >
                       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-neon-electric/0 via-transparent to-transparent group-hover:from-neon-electric/10 transition-all duration-500 pointer-events-none" />
 
                       <div>
                         <div className="flex items-center justify-between mb-5">
-                          <div className="w-12 h-12 rounded-2xl bg-neon-electric/10 border border-neon-electric/30 flex items-center justify-center text-neon-electric shadow-[0_0_20px_rgba(0,230,118,0.15)] transition-transform duration-300 group-hover:scale-105">
+                          <div className="w-12 h-12 rounded-2xl bg-neon-electric/10 border border-neon-electric/30 flex items-center justify-center text-emerald-600 dark:text-neon-electric shadow-[0_0_20px_rgba(0,230,118,0.15)] transition-transform duration-300 group-hover:scale-105">
                             <Icon size={24} />
                           </div>
-                          <span className="text-[10px] font-extrabold tracking-wider text-neon-electric bg-neon-electric/10 px-3 py-1 rounded-full border border-neon-electric/25">
+                          <span className="text-[10px] font-extrabold tracking-wider text-emerald-700 dark:text-neon-electric bg-neon-electric/10 px-3 py-1 rounded-full border border-neon-electric/25">
                             {feature.tag}
                           </span>
                         </div>
 
-                        <h3 className="font-display font-bold text-lg text-white mb-2.5 group-hover:text-neon-electric transition-colors">
+                        <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2.5 group-hover:text-emerald-600 dark:group-hover:text-neon-electric transition-colors">
                           {feature.title}
                         </h3>
 
-                        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
 
-                      <div className="mt-5 pt-4 border-t border-white/5 flex items-center text-[11px] font-semibold text-neon-electric opacity-90 group-hover:opacity-100 transition-opacity">
+                      <div className="mt-5 pt-4 border-t border-slate-200 dark:border-white/5 flex items-center text-[11px] font-semibold text-emerald-600 dark:text-neon-electric opacity-90 group-hover:opacity-100 transition-opacity">
                         <span className="flex items-center gap-1.5">
                           <Check size={13} className="text-neon-electric" />
                           Incluido en todas las suscripciones
                         </span>
-                        <span className="ml-auto text-slate-400 font-mono">TvTotal24</span>
+                        <span className="ml-auto text-slate-500 dark:text-slate-400 font-mono">TvTotal24</span>
                       </div>
                     </motion.div>
                   );

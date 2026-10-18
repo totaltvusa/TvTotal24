@@ -72,6 +72,17 @@ export type PricingPlan = {
   features: string[];
 };
 
+export const UNIVERSAL_PLAN_FEATURES: string[] = [
+  '3 Pantallas o dispositivos simultáneos (ej. Smart TV, Fire Stick, celulares, tablets, computadores, etc.)',
+  'Más de 5.000 canales de televisión en vivo en Full HD y 4K',
+  'Más de 25.000 películas y series completas on-demand',
+  'Torneos de fútbol, deportes y ligas internacionales',
+  'Guía electrónica interactiva de programación (EPG)',
+  'Servidores estables con tecnología anti-buffering',
+  'Activación rápida y soporte directo por WhatsApp',
+  'Sin contratos obligatorios ni penalizaciones',
+];
+
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: '1month',
@@ -85,15 +96,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     popular: false,
     bestValue: false,
     binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
-    features: [
-      '3 Pantallas o Dispositivos Simultáneos',
-      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
-      'Más de 25.000 películas y series completas on-demand',
-      'Eventos deportivos mundiales en directo a 60 FPS',
-      'Guía electrónica interactiva de programación (EPG)',
-      'Servidores dedicados con tecnología anti-buffering',
-      'Activación inmediata directa por WhatsApp',
-    ],
+    features: UNIVERSAL_PLAN_FEATURES,
   },
   {
     id: '3months',
@@ -108,15 +111,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     bestValue: false,
     savingsBadge: 'Ahorro Garantizado',
     binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
-    features: [
-      '3 Pantallas o Dispositivos Simultáneos',
-      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
-      'Más de 25.000 películas y series completas on-demand',
-      'Todas las ligas deportivas prémium sin cortes',
-      'Acceso ininterrumpido durante 90 días',
-      'Soporte técnico prioritario 24/7 vía WhatsApp',
-      'Sin contratos obligatorios ni penalizaciones',
-    ],
+    features: UNIVERSAL_PLAN_FEATURES,
   },
   {
     id: '6months',
@@ -131,15 +126,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     bestValue: false,
     savingsBadge: 'Gran Ahorro Semestral',
     binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
-    features: [
-      '3 Pantallas o Dispositivos Simultáneos',
-      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
-      'Más de 25.000 películas y series completas on-demand',
-      'Transmisiones de alta velocidad a 60 FPS sin retraso',
-      'Catálogo VOD ilimitado con estrenos semanales',
-      'Reconexión automática y máxima estabilidad',
-      'Asistencia personalizada preferencial por WhatsApp',
-    ],
+    features: UNIVERSAL_PLAN_FEATURES,
   },
   {
     id: '12months',
@@ -154,15 +141,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     bestValue: true,
     savingsBadge: 'Precio Más Bajo: $7/mes',
     binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
-    features: [
-      '3 Pantallas o Dispositivos Simultáneos',
-      'Acceso completo durante 365 días al precio más bajo ($7/mes)',
-      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
-      'Más de 25.000 películas y series completas on-demand',
-      'Máxima prioridad en servidores dedicados de alta velocidad',
-      'Estrenos cinematográficos y eventos PPV incluidos',
-      'Soporte VIP inmediato vía WhatsApp exclusivo',
-    ],
+    features: UNIVERSAL_PLAN_FEATURES,
   },
 ];
 
@@ -203,8 +182,8 @@ export const CORE_FEATURES: Feature[] = [
   },
   {
     icon: 'Trophy',
-    title: 'Deportes en Vivo a 60 FPS',
-    description: 'Transmisión en directo de fútbol internacional, Champions League, UFC, NBA, MLB, NFL, boxeo y Fórmula 1 en Full HD y 4K.',
+    title: 'Deportes en Vivo en Full HD y 4K',
+    description: 'Transmisión en directo de fútbol internacional, Champions League, UFC, NBA, MLB, NFL, boxeo y automovilismo en Full HD y 4K.',
     tag: 'DEPORTES EN DIRECTO',
   },
   {
@@ -222,13 +201,13 @@ export const CORE_FEATURES: Feature[] = [
   {
     icon: 'Smartphone',
     title: 'Compatibilidad Multidispositivo Total',
-    description: 'Compatible con Smart TVs (Samsung, LG, Sony, TCL), Amazon Fire TV Stick, TV Box, Android, iPhone, iPad y PC.',
+    description: 'Compatible con múltiples dispositivos (Smart TV, Fire Stick, Android, iPhone, iPad, PC y muchos más).',
     tag: 'UNIVERSAL',
   },
   {
     icon: 'Bot',
     title: 'Soporte Directo y Asistencia Técnica',
-    description: 'Atención personalizada e inmediata por WhatsApp (+57 300 947 6271) para instalación, dudas y soporte.',
+    description: 'Atención personalizada y rápida por WhatsApp (+57 300 947 6271) para instalación, dudas y soporte.',
     tag: 'SOPORTE WHATSAPP',
   },
 ];
@@ -250,13 +229,13 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     category: 'Deportes y Competiciones en Vivo',
     title: 'La Emoción del Deporte en Directo las 24 Horas',
     badge: 'DEPORTES EN HD Y 4K',
-    description: 'Sigue todas las ligas internacionales, torneos de fútbol, noches de combate y las grandes ligas americanas en tu pantalla favorita.',
+    description: 'Sigue los torneos de fútbol, las grandes ligas americanas, noches de combate y todas las ligas internacionales en tu pantalla favorita.',
     image: SPORTS_IMAGE,
     highlights: [
       'Champions League, Copa Libertadores y Ligas Europeas',
       'NFL, NBA Basketball, MLB Béisbol y Fórmula 1',
-      'Combates Estelares de UFC, Boxeo y PPV Exclusivos',
-      'Transmisiones de Alta Velocidad a 60 FPS sin retraso',
+      'Combates Estelares de UFC, Boxeo y PPV',
+      'Transmisiones fluidas en alta definición y máxima estabilidad',
     ],
     platforms: ['ESPN', 'Fox Sports', 'DAZN', 'Directv Sports', 'TUDN'],
   },
@@ -271,7 +250,7 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
       'Más de 25.000 contenidos actualizados constantemente',
       'Producciones seleccionadas en auténtico 4K Ultra HD',
       'Audio original en español latino y subtítulos sincronizados',
-      'Buscador rápido por género, año y actores',
+      'Catálogo organizado por categorías y novedades',
     ],
     platforms: ['HBO', 'Disney+', 'Netflix', 'Amazon Prime', 'Paramount+'],
   },
@@ -280,7 +259,7 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     category: 'Series Completas y Maratones',
     title: 'Tus Series Favoritas de Principio a Fin',
     badge: 'TEMPORADAS COMPLETAS',
-    description: 'Explora temporadas completas, dramas aclamados, comedias y miniseries exclusivas organizadas por episodios para tus maratones.',
+    description: 'Explora temporadas completas, dramas aclamados, comedias y miniseries organizadas por episodios para tus maratones.',
     image: SERIES_IMAGE,
     highlights: [
       'Temporadas completas disponibles sin esperas',
@@ -288,7 +267,7 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
       'Reproducción continua y guardado de progreso',
       'Calidad Full HD con sonido envolvente de cine',
     ],
-    platforms: ['Apple TV+', 'Max', 'Hulu', 'Star+', 'Universal'],
+    platforms: ['Netflix', 'Apple TV+', 'Max', 'Amazon Prime', 'Paramount+'],
   },
   {
     id: 'livetv',
@@ -345,7 +324,7 @@ export const WHY_CHOOSE_US = [
   },
   {
     title: 'Súper Descuento con Binance',
-    description: 'Paga con Binance Pay o Criptomonedas y recibe descuentos especiales exclusivos en tu suscripción.',
+    description: 'Paga con Binance y recibe un súper descuento especial en tu suscripción.',
     icon: 'CreditCard',
   },
   {
@@ -389,7 +368,7 @@ export const DEVICE_CATEGORIES: DeviceCategory[] = [
     subtitle: 'Plug & Play Streaming',
     icon: 'Flame',
     badge: 'Rendimiento 4K Ultra',
-    description: 'Dispositivos de transmisión de alto rendimiento y máxima fluidez para canales en 4K UHD y 60 FPS.',
+    description: 'Dispositivos de transmisión de alto rendimiento y máxima fluidez para canales en Full HD y 4K UHD.',
     examples: [
       'Amazon Fire TV Stick (Lite, 4K, 4K Max, Cube)',
       'Chromecast con Google TV',
@@ -460,7 +439,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Carlos Mendoza',
     location: 'Bogotá, Colombia',
     rating: 5.0,
-    text: 'Increíble calidad. La transmisión de los partidos de fútbol y la Champions en 60 FPS es súper fluida, sin cortes. Además el pago con Binance fue facilísimo y con descuento.',
+    text: 'Increíble calidad. La transmisión de los partidos de fútbol y la Champions es súper fluida, sin cortes. Además el pago con Binance fue facilísimo y con descuento.',
     device: 'Amazon Fire TV Stick 4K',
     avatarText: 'CM',
   },
@@ -484,7 +463,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Lucía Fernández',
     location: 'Buenos Aires, Argentina',
     rating: 5.0,
-    text: 'Probé primero la prueba gratis y quedé encantada. La atención por WhatsApp fue inmediata y el catálogo tiene más de 25.000 películas y series completas.',
+    text: 'Probé primero la prueba gratis y quedé encantada. La atención por WhatsApp fue muy rápida y el catálogo tiene más de 25.000 películas y series completas.',
     device: 'Chromecast con Google TV',
     avatarText: 'LF',
   },
@@ -525,11 +504,11 @@ export const FAQS = [
   },
   {
     question: '¿Cómo recibo mis credenciales una vez que contrato el servicio?',
-    answer: 'Inmediatamente después de confirmar tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión) junto a la guía de instalación rápida por WhatsApp (+57 300 947 6271).',
+    answer: 'Una vez confirmada tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión) junto a la guía de instalación rápida por WhatsApp (+57 300 947 6271).',
   },
   {
     question: '¿Qué métodos de pago aceptan?',
-    answer: 'Aceptamos Binance Pay (¡con un SÚPER descuento exclusivo!), transferencias Zelle, tarjetas de débito/crédito, transferencias bancarias locales y criptomonedas. Puedes coordinar tu pago y consultar tu descuento directamente por WhatsApp.',
+    answer: 'Aceptamos Binance, Cripto, Zelle y Bolívares. Puedes coordinar tu pago y consultar tu súper descuento con Binance directamente por WhatsApp (+57 300 947 6271).',
   },
 ];
 

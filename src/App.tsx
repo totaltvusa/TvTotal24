@@ -100,7 +100,7 @@ function AppContent() {
   }
 
   return (
-    <div className="min-h-screen bg-obsidian-950 text-slate-100 overflow-x-hidden font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-obsidian-950 text-slate-900 dark:text-slate-100 overflow-x-hidden font-sans transition-colors duration-300">
       <Header />
       <main>
         {/* 1. Hero con Carrusel Dinámico y Presentación */}

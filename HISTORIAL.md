@@ -119,6 +119,53 @@ TvTotal24/
 
 ## 📝 4. Bitácora de Cambios
 
+### [2026-10-18] - Corrección Integral de Modo Claro/Oscuro, Video Responsive en iPhone, Activación Clara, Unificación de Beneficios y Métodos de Pago
+
+#### 🚀 Ajustes y Mejoras Implementadas (Puntos 7 al 18):
+1. **Modo Claro y Oscuro Funcional y Adaptativo (Punto 7):**
+   - Corrección integral de estilos y contrastes en desktop y mobile.
+   - Sustitución de fondos fijos `bg-obsidian-950` por clases dinámicas `bg-slate-50 dark:bg-obsidian-950` y `bg-transparent dark:bg-obsidian-950` en todos los componentes y contenedores.
+   - Textos adaptativos con alto contraste (`text-slate-900 dark:text-white` para títulos y `text-slate-700 dark:text-slate-300` para cuerpo).
+   - Inyección de script síncrono en `<head>` de `index.html` para aplicar el tema guardado en `localStorage` antes del primer renderizado visual (sin parpadeos).
+   - Menú hamburguesa móvil y drawer completamente legibles y contrastados en ambos modos.
+
+2. **Resolución de Recorte de Videos en iPhone / Hero TV (Punto 8):**
+   - Transición del contenedor de pantalla de TV en `Hero.tsx` de `aspect-[16/10]` a `aspect-video` (16:9).
+   - Ajuste del elemento `<video>` en `DynamicHeroCarousel.tsx` a `w-full h-full object-contain bg-black` con atributos optimizados para WebKit iOS (`playsInline`, `muted`, `autoPlay`, `loop`), garantizando que ningún tráiler o transmisión se corte en pantallas estrechas.
+
+3. **Flujo de Activación Clara y Dispositivos de Ejemplo (Punto 9):**
+   - **Paso 01:** Selección únicamente del tiempo o duración del plan (1, 3, 6 o 12 meses), eliminando cualquier mención a selección de número de pantallas.
+   - **Paso 03:** Redactado con tono ejemplificativo: *"Abre la aplicación en tu dispositivo (Smart TV, Fire Stick, teléfono, PC, etc.)..."*.
+
+4. **Revisión del Catálogo y Entretenimiento (Punto 10):**
+   - Deportes: Actualizado a *"Sigue los torneos de fútbol, las grandes ligas americanas, noches de combate y todas las ligas internacionales en tu pantalla favorita."*.
+   - Eliminación de la frase inexacta sobre 60 FPS sin retraso.
+   - Cine y Series: Eliminación de *"Buscador rápido por género, año y actores"*, retiro del adjetivo *"exclusivas"* e incorporación explícita de **Netflix** en la lista de plataformas.
+
+5. **Compatibilidad con Dispositivos como Ejemplos (Punto 11):**
+   - Todas las referencias a Smart TV, Firestick, iPhone, PC en la demostración gratuita, planes y descripciones se presentan como ejemplos para que el cliente comprenda que el servicio funciona en cualquier dispositivo compatible.
+
+6. **Eliminación de Afirmaciones de Activación "Instantánea / Inmediata" (Punto 12):**
+   - Sustitución sistemática en toda la web por términos honestos y transparentes como *"activación rápida y directa"*, *"proceso ágil"* y *"activación en minutos"*.
+
+7. **Eliminación de Promesas Falsas o Inexactas (Punto 13):**
+   - Eliminación de frases como *"Estrenos de cine antes de que lleguen a otras plataformas"* o promesas de atención VIP exclusiva sin demoras.
+
+8. **Unificación Total de Beneficios en los 4 Planes (Punto 14):**
+   - Creación de `UNIVERSAL_PLAN_FEATURES` en `src/data.ts`.
+   - Los planes de 1, 3, 6 y 12 meses cuentan con los mismos beneficios completos (más de 5.000 canales, más de 25.000 películas y series, 3 pantallas simultáneas, calidad FHD y 4K UHD, soporte técnico por WhatsApp, guía de instalación). La única diferencia entre ellos es la duración y el precio.
+
+9. **Eliminación Absoluta de Referencias a "60 FPS" (Puntos 15 y 18):**
+   - Búsqueda y eliminación total de menciones a 60 FPS o tasas de refresco en slides, héroe, pie de página, FAQs y descripciones.
+
+10. **Ajuste de Nomenclatura para Binance (Punto 16):**
+    - Referencias exclusivamente a **Binance** (se eliminó "Binance Pay" y criptomonedas asociadas a marcas).
+
+11. **Métodos de Pago Claros y Actualizados (Punto 17):**
+    - Redacción oficial unificada: *"Aceptamos Binance, Cripto, Zelle y Bolívares"* en la sección de precios, badges de garantía y preguntas frecuentes.
+
+---
+
 ### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado
 
 #### 🚀 Ajustes y Mejoras Implementadas:

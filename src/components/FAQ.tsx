@@ -8,7 +8,7 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-14 sm:py-20 bg-obsidian-950 overflow-hidden">
+    <section id="faq" className="relative py-14 sm:py-20 bg-transparent dark:bg-obsidian-950 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[450px] bg-neon-emerald/8 rounded-full blur-[160px] pointer-events-none" />
 
@@ -21,29 +21,29 @@ export default function FAQ() {
           transition={{ duration: 0.5 }}
           className="text-center mb-6"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass border border-neon-emerald/30 text-xs font-bold tracking-widest text-neon-emerald uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass border border-slate-200 dark:border-neon-emerald/30 text-xs font-bold tracking-widest text-emerald-600 dark:text-neon-emerald uppercase mb-3">
             <Sparkles size={12} />
             Respuestas Claras
           </div>
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white tracking-tight">
             Preguntas <span className="text-gradient">Frecuentes</span>
           </h2>
-          <p className="mt-3 text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Todo lo que necesitas saber sobre activación instantánea, 3 pantallas simultáneas, calidad de transmisión y métodos de pago.
+          <p className="mt-3 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            Todo lo que necesitas saber sobre activación rápida y directa, 3 pantallas simultáneas, calidad de transmisión y métodos de pago.
           </p>
 
           {/* Collapsible Toggle Button */}
           <div className="mt-6 flex justify-center">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full glass border border-white/20 hover:border-neon-emerald/50 text-xs sm:text-sm font-bold text-slate-200 hover:text-white transition-all shadow-md group"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full glass border border-slate-300 dark:border-white/20 hover:border-emerald-500 dark:hover:border-neon-emerald/50 text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white transition-all shadow-md group"
             >
               <span>{expanded ? 'Mostrar Menos' : 'Ver Todas las Preguntas'}</span>
               <motion.div
                 animate={{ rotate: expanded ? 180 : 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <ChevronDown size={16} className="text-neon-emerald group-hover:scale-110 transition-transform" />
+                <ChevronDown size={16} className="text-emerald-600 dark:text-neon-emerald group-hover:scale-110 transition-transform" />
               </motion.div>
             </button>
           </div>
@@ -71,23 +71,23 @@ export default function FAQ() {
                       transition={{ duration: 0.3, delay: idx * 0.03 }}
                       className={`rounded-2xl overflow-hidden transition-all duration-300 border ${
                         isOpen
-                          ? 'glass-strong border-neon-emerald/50 shadow-[0_0_30px_rgba(0,230,118,0.15)]'
-                          : 'glass border-white/10 hover:border-white/20'
+                          ? 'glass-strong border-emerald-500/50 dark:border-neon-emerald/50 shadow-[0_0_30px_rgba(0,230,118,0.15)]'
+                          : 'glass border-slate-200 dark:border-white/10 hover:border-emerald-500/40 dark:hover:border-white/20'
                       }`}
                     >
                       <button
                         onClick={() => setOpenIdx(isOpen ? null : idx)}
                         className="w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors"
                       >
-                        <span className="font-display font-bold text-base sm:text-lg text-white flex items-center gap-3">
-                          <HelpCircle size={18} className="text-neon-emerald shrink-0" />
+                        <span className="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-3">
+                          <HelpCircle size={18} className="text-emerald-600 dark:text-neon-emerald shrink-0" />
                           {item.question}
                         </span>
                         <div
                           className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
                             isOpen
-                              ? 'rotate-180 bg-neon-emerald text-obsidian-950'
-                              : 'glass text-slate-400'
+                              ? 'rotate-180 bg-emerald-500 dark:bg-neon-emerald text-white dark:text-obsidian-950'
+                              : 'glass text-slate-500 dark:text-slate-400'
                           }`}
                         >
                           <ChevronDown size={18} />
@@ -102,11 +102,11 @@ export default function FAQ() {
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3, ease: 'easeInOut' }}
                           >
-                            <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-white/5">
+                            <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed border-t border-slate-200 dark:border-white/5">
                               {item.answer.split(/(\*\*\*.*?\*\*\*)/g).map((part, i) => {
                                 if (part.startsWith('***') && part.endsWith('***')) {
                                   return (
-                                    <strong key={i} className="font-bold italic text-white">
+                                    <strong key={i} className="font-bold italic text-slate-900 dark:text-white">
                                       {part.slice(3, -3)}
                                     </strong>
                                   );
@@ -123,12 +123,12 @@ export default function FAQ() {
               </div>
 
               {/* Need more help CTA: DIRECT TO WHATSAPP */}
-              <div className="mt-10 p-6 rounded-2xl glass border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+              <div className="mt-10 p-6 rounded-2xl glass border border-slate-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
                 <div>
-                  <h4 className="font-display font-bold text-base text-white">
+                  <h4 className="font-display font-bold text-base text-slate-900 dark:text-white">
                     ¿Tienes alguna duda o necesitas asistencia técnica?
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                     Nuestro equipo de soporte técnico responde directamente por WhatsApp (+57 300 947 6271).
                   </p>
                 </div>
