@@ -27,7 +27,7 @@ export default function FloatingWhatsApp() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.94 }}
         className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#00c853] to-[#00e676] text-obsidian-950 flex items-center justify-center shadow-2xl shadow-neon-electric/50 border-2 border-white/50 hover:shadow-neon-glow transition-all duration-300"
-        aria-label="Chatea con nosotros por WhatsApp (+57 300 947 6271)"
+        aria-label="Chatea con nosotros por WhatsApp"
         title="Chatea con nosotros por WhatsApp"
       >
         <WhatsAppIcon size={32} className="text-obsidian-950" />

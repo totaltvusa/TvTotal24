@@ -145,17 +145,31 @@ export default function DynamicHeroCarousel({
     });
   }, [mediaPool]);
 
+  const isCurrentVideo = isVideoUrl(currentMedia);
+
   useEffect(() => {
     if (mediaPool.length <= 1) return;
 
-    timerRef.current = setInterval(advanceSlide, cycleIntervalMs);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+
+    if (isCurrentVideo) {
+      // Safety timeout (35s) in case video fails to fire onEnded or stalls
+      timerRef.current = setTimeout(advanceSlide, 35000);
+    } else {
+      // Standard interval for images
+      timerRef.current = setTimeout(advanceSlide, cycleIntervalMs);
+    }
 
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
     };
-  }, [mediaPool, advanceSlide, cycleIntervalMs]);
-
-  const isCurrentVideo = isVideoUrl(currentMedia);
+  }, [currentMedia, mediaPool.length, isCurrentVideo, advanceSlide, cycleIntervalMs]);
 
   return (
     <div className="relative w-full h-full overflow-hidden rounded-2xl sm:rounded-3xl bg-obsidian-950">
@@ -170,11 +184,13 @@ export default function DynamicHeroCarousel({
         >
           {isCurrentVideo ? (
             <video
+              key={currentMedia}
               src={currentMedia}
               autoPlay
               muted
-              loop
               playsInline
+              onEnded={advanceSlide}
+              onError={advanceSlide}
               className="w-full h-full object-contain bg-black"
             />
           ) : (

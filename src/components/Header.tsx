@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sparkles, MessageCircle } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 import { NAV_LINKS, LOGO_URL, WHATSAPP_LINKS } from '@/data';
 import ThemeToggle from './ThemeToggle';
 
@@ -57,18 +57,6 @@ export default function Header() {
           {/* Right: Direct Action Buttons & Theme Switcher */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-
-            {/* Asistencia Técnica directo a WhatsApp */}
-            <a
-              href={WHATSAPP_LINKS.support}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full glass border border-slate-300 dark:border-neon-electric/30 text-xs font-bold text-slate-800 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-white hover:border-emerald-500/60 dark:hover:border-neon-electric/60 hover:bg-emerald-50 dark:hover:bg-neon-electric/10 transition-all shadow-sm group"
-              title="Asistencia técnica directa por WhatsApp"
-            >
-              <MessageCircle size={15} className="text-neon-electric" />
-              <span>Asistencia Técnica</span>
-            </a>
 
             {/* Demo Gratis directo a WhatsApp */}
             <a
@@ -128,17 +116,6 @@ export default function Header() {
                   >
                     <Sparkles size={15} />
                     Solicitar Demo Gratis
-                  </a>
-
-                  <a
-                    href={WHATSAPP_LINKS.support}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileOpen(false)}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl glass border border-slate-300 dark:border-neon-electric/30 text-xs font-bold text-slate-800 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-white"
-                  >
-                    <MessageCircle size={15} className="text-neon-electric" />
-                    Asistencia Técnica (+57 300 947 6271)
                   </a>
                 </div>
               </nav>

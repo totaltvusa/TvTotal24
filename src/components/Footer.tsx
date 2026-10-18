@@ -87,7 +87,7 @@ export default function Footer({ onNavigateLegal }: FooterProps = {}) {
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">WhatsApp Oficial</div>
-                  <div className="text-xs font-bold text-slate-900 dark:text-white">+57 300 947 6271</div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white">Chat y Atención 24/7</div>
                 </div>
               </a>
 

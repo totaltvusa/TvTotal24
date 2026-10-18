@@ -9,7 +9,7 @@ import {
   Coins,
   ShieldCheck,
 } from 'lucide-react';
-import { PRICING_PLANS, WHATSAPP_LINKS } from '@/data';
+import { PRICING_PLANS, WHATSAPP_LINKS, WHATSAPP_NUMBER } from '@/data';
 
 export default function Pricing() {
   return (
@@ -70,7 +70,7 @@ export default function Pricing() {
           </div>
 
           <a
-            href={`https://wa.me/573009476271?text=${encodeURIComponent('¡Hola TvTotal24! Quiero consultar el SUPER descuento pagando con Binance.')}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero consultar el SUPER descuento pagando con Binance.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-obsidian-950 font-black text-xs sm:text-sm uppercase tracking-wide hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)]"

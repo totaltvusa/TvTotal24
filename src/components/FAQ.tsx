@@ -129,7 +129,7 @@ export default function FAQ() {
                     ¿Tienes alguna duda o necesitas asistencia técnica?
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Nuestro equipo de soporte técnico responde directamente por WhatsApp (+57 300 947 6271).
+                    Nuestro equipo de soporte técnico responde directamente por WhatsApp.
                   </p>
                 </div>
                 <a

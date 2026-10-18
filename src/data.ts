@@ -20,7 +20,7 @@ export const NAV_LINKS = [
 ];
 
 export const WHATSAPP_NUMBER = '573009476271';
-export const PHONE_DISPLAY = '+57 300 947 6271';
+export const PHONE_DISPLAY = 'WhatsApp Oficial';
 export const PHONE_TEL = 'tel:+573009476271';
 
 export const WHATSAPP_LINKS = {
@@ -36,7 +36,7 @@ export const SOCIAL_LINKS = [
   {
     name: 'WhatsApp',
     url: `https://wa.me/${WHATSAPP_NUMBER}`,
-    handle: '+57 300 947 6271',
+    handle: 'Atención 24/7',
     icon: 'WhatsApp',
     color: '#00E676',
   },
@@ -207,7 +207,7 @@ export const CORE_FEATURES: Feature[] = [
   {
     icon: 'Bot',
     title: 'Soporte Directo y Asistencia Técnica',
-    description: 'Atención personalizada y rápida por WhatsApp (+57 300 947 6271) para instalación, dudas y soporte.',
+    description: 'Atención personalizada y rápida por WhatsApp para instalación, dudas y soporte.',
     tag: 'SOPORTE WHATSAPP',
   },
 ];
@@ -314,7 +314,7 @@ export const WHY_CHOOSE_US = [
   },
   {
     title: 'Soporte Directo por WhatsApp',
-    description: 'Asistencia técnica personalizada y rápida a través de WhatsApp (+57 300 947 6271) para resolver cualquier inquietud.',
+    description: 'Asistencia técnica personalizada y rápida a través de WhatsApp para resolver cualquier inquietud.',
     icon: 'MessageSquare',
   },
   {

@@ -170,6 +170,17 @@ TvTotal24/
 13. **Respuesta FAQ sobre Métodos de Pago y Pago Móvil (Punto 20):**
     - Respuesta actualizada con precisión a: *"Aceptamos Binance (¡con un SÚPER descuento exclusivo!), transferencias Zelle, pago móvil (bolívares) y criptomonedas."*.
 
+14. **Eliminación del Enlace de Asistencia Técnica del Menú Superior:**
+    - Se retiró el botón de "Asistencia Técnica" de la barra de navegación superior (desktop y drawer móvil), manteniendo un menú limpio enfocado en la navegación y el botón de "Demo Gratis".
+
+15. **Duración Completa de Videos en TV de Inicio (Hero Carousel):**
+    - Se resolvió la causa por la cual los videos se cortaban: un temporizador fijo forzaba la transición a los 4.5 segundos.
+    - Ahora cada video se reproduce en su duración completa natural y pasa al siguiente clip automáticamente mediante el evento `onEnded`, manteniendo precarga en segundo plano para evitar esperas o buffering.
+
+16. **Ocultación Total del Número Telefónico de WhatsApp en Pantalla:**
+    - Se eliminó la exposición en texto plano del número telefónico (`+57 300 947 6271`) en toda la interfaz visible (Footer, FAQ, tarjetas de características, accesibilidad y sección de comunidad).
+    - El número permanece integrado funcionalmente en los enlaces `https://wa.me/573009476271`, mostrándose en pantalla únicamente como *"WhatsApp Oficial"*, *"Chat y Atención 24/7"* o *"Atención por WhatsApp"*.
+
 ---
 
 ### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado
