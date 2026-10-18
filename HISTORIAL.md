@@ -162,7 +162,13 @@ TvTotal24/
     - Referencias exclusivamente a **Binance** (se eliminó "Binance Pay" y criptomonedas asociadas a marcas).
 
 11. **Métodos de Pago Claros y Actualizados (Punto 17):**
-    - Redacción oficial unificada: *"Aceptamos Binance, Cripto, Zelle y Bolívares"* en la sección de precios, badges de garantía y preguntas frecuentes.
+    - Redacción oficial unificada: *"Aceptamos Binance, Cripto, Zelle y Bolívares"* en la sección de precios y badges de garantía.
+
+12. **Respuesta FAQ sobre Entrega de Credenciales (Punto 19):**
+    - Respuesta actualizada con precisión a: *"Inmediatamente después de confirmar tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión)."*.
+
+13. **Respuesta FAQ sobre Métodos de Pago y Pago Móvil (Punto 20):**
+    - Respuesta actualizada con precisión a: *"Aceptamos Binance (¡con un SÚPER descuento exclusivo!), transferencias Zelle, pago móvil (bolívares) y criptomonedas."*.
 
 ---
 

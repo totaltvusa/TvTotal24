@@ -504,11 +504,11 @@ export const FAQS = [
   },
   {
     question: '¿Cómo recibo mis credenciales una vez que contrato el servicio?',
-    answer: 'Una vez confirmada tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión) junto a la guía de instalación rápida por WhatsApp (+57 300 947 6271).',
+    answer: 'Inmediatamente después de confirmar tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión).',
   },
   {
     question: '¿Qué métodos de pago aceptan?',
-    answer: 'Aceptamos Binance, Cripto, Zelle y Bolívares. Puedes coordinar tu pago y consultar tu súper descuento con Binance directamente por WhatsApp (+57 300 947 6271).',
+    answer: 'Aceptamos Binance (¡con un SÚPER descuento exclusivo!), transferencias Zelle, pago móvil (bolívares) y criptomonedas.',
   },
 ];
 
