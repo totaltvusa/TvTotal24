@@ -112,7 +112,7 @@ function AppContent() {
         {/* 3. Canales, Deportes, Películas y Series */}
         <EntertainmentFeatures />
 
-        {/* 4. Prueba Gratis de 24 Horas */}
+        {/* 4. Prueba Gratis */}
         <FreeDemo />
 
         {/* 5. Planes de Suscripción */}

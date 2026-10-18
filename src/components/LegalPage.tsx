@@ -75,8 +75,8 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
 
             <div className="h-6 w-px bg-white/10 hidden sm:block" />
 
-            <div onClick={onNavigateHome} className="cursor-pointer flex items-center gap-2.5">
-              <img src={LOGO_URL} alt="TvTotal24" className="h-9 w-auto object-contain" />
+            <div onClick={onNavigateHome} className="cursor-pointer flex items-center gap-3">
+              <img src={LOGO_URL} alt="TvTotal24" className="h-14 sm:h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(0,230,118,0.4)]" />
               <span className="hidden md:inline-block text-xs font-bold uppercase tracking-widest text-slate-400">
                 Centro Legal
               </span>
@@ -170,8 +170,8 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
               Cuando interactúas con TvTotal24 (por ejemplo al solicitar una prueba gratuita, suscribirte a un plan o solicitar soporte técnico), podemos recopilar únicamente la información indispensable para el servicio:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-slate-300">
-              <li><strong>Datos de Contacto:</strong> Número de teléfono de WhatsApp, usuario de Telegram, cuenta de Facebook Messenger o correo electrónico utilizado para la comunicación.</li>
-              <li><strong>Detalles del Plan:</strong> Duración de la suscripción seleccionada (1, 3, 6 o 12 meses), cantidad de dispositivos simultáneos e identificador de confirmación de pago.</li>
+              <li><strong>Datos de Contacto:</strong> Número de teléfono de WhatsApp, usuario de Telegram o correo electrónico utilizado para la comunicación.</li>
+              <li><strong>Detalles del Plan:</strong> Duración de la suscripción seleccionada (1, 3, 6 o 12 meses, todos con 3 pantallas simultáneas) e identificador de confirmación de pago.</li>
               <li><strong>Datos Técnicos de Diagnóstico:</strong> Modelo de dispositivo o aplicación reproductora utilizada (p. ej. Fire TV Stick, Smart TV, TiviMate, Android TV) con el único objetivo de orientarte durante la instalación.</li>
             </ul>
 
@@ -280,7 +280,7 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
               5. Dispositivos Simultáneos
             </h3>
             <p>
-              Tu suscripción te autoriza a reproducir contenido de forma simultánea únicamente en el número de pantallas contratadas (1, 2 o 3 conexiones). El intento de transmitir en más pantallas al mismo tiempo resultará en el cierre automático de la conexión excedente por parte de la plataforma.
+              Todos los planes de suscripción de TvTotal24 te autorizan a reproducir contenido de forma simultánea en hasta 3 pantallas o dispositivos conectados. El intento de transmitir en más de 3 pantallas al mismo tiempo resultará en el cierre automático de la conexión excedente por parte de la plataforma.
             </p>
           </div>
         </section>

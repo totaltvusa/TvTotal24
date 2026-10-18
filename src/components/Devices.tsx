@@ -12,8 +12,7 @@ import {
   ChevronDown,
   type LucideIcon,
 } from 'lucide-react';
-import { DEVICE_CATEGORIES } from '@/data';
-import ContactModal from './ContactModal';
+import { DEVICE_CATEGORIES, WHATSAPP_LINKS } from '@/data';
 
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
   Tv,
@@ -23,7 +22,6 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
 };
 
 export default function Devices() {
-  const [modalOpen, setModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<string>('all');
   const [expanded, setExpanded] = useState(true);
 
@@ -33,8 +31,7 @@ export default function Devices() {
       : DEVICE_CATEGORIES.filter((c) => c.id === activeTab);
 
   return (
-    <>
-      <section id="devices" className="relative py-12 sm:py-16 bg-obsidian-950 overflow-hidden">
+    <section id="devices" className="relative py-12 sm:py-16 bg-obsidian-950 overflow-hidden">
         {/* Dynamic backlights */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-neon-electric/8 rounded-full blur-[180px] pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-600/6 rounded-full blur-[140px] pointer-events-none" />
@@ -193,26 +190,20 @@ export default function Devices() {
                       </div>
                     </div>
                   </div>
-                  <button
-                    onClick={() => setModalOpen(true)}
-                    className="shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full btn-neon-green text-xs font-bold uppercase tracking-wider"
+                  <a
+                    href={WHATSAPP_LINKS.support}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full btn-neon-green text-xs font-black uppercase tracking-wider shadow-neon-glow hover:scale-105 transition-all"
                   >
                     <MessageCircle size={15} />
                     Asistencia Técnica
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
         </div>
       </section>
-
-      <ContactModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        title="Asistencia de Instalación TvTotal24"
-        subtitle="Escríbenos para recibir la guía exacta y los enlaces de descarga para la marca y modelo de tu dispositivo."
-      />
-    </>
   );
 }

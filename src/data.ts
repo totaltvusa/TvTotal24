@@ -1,5 +1,6 @@
+// Data and Configuration for TvTotal24 Website
+
 export const LOGO_URL = '/images/logo-transparent.png';
-export const LOGO_ORIGINAL = '/images/logo.png';
 export const HERO_IMAGE = '/images/hero.webp';
 export const SPORTS_IMAGE = '/images/sports.webp';
 export const MOVIES_IMAGE = '/images/movies.webp';
@@ -11,62 +12,49 @@ export const TRIAL_IMAGE = '/images/trial.webp';
 
 export const NAV_LINKS = [
   { label: 'Inicio', href: '#top' },
-  { label: 'Entretenimiento', href: '#features' },
-  { label: 'Demo Gratis', href: '#demo' },
+  { label: 'Contenido', href: '#features' },
   { label: 'Planes y Precios', href: '#pricing' },
   { label: 'Beneficios', href: '#why-us' },
   { label: 'Dispositivos', href: '#devices' },
   { label: 'Preguntas Frecuentes', href: '#faq' },
 ];
 
-export const WHATSAPP_NUMBER = '13059861096';
+export const WHATSAPP_NUMBER = '573009476271';
+export const PHONE_DISPLAY = '+57 300 947 6271';
+export const PHONE_TEL = 'tel:+573009476271';
 
 export const WHATSAPP_LINKS = {
   general: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Deseo más información y soporte sobre el servicio.')}`,
-  demo: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Me gustaría solicitar una demo gratis sin compromiso.')}`,
+  demo: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero solicitar la prueba gratis.')}`,
+  support: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Necesito asistencia técnica con mi servicio.')}`,
   raw: `https://wa.me/${WHATSAPP_NUMBER}`,
-  plan: (planName: string, conns: number, adult: boolean, price: number) =>
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      `¡Hola TvTotal24! Quiero activar el ${planName} (${conns} ${conns === 1 ? 'pantalla' : 'pantallas'}${adult ? ', con contenido adulto' : ''}) por $${price} USD. ¿Cuáles son los métodos de pago?`
-    )}`,
+  plan: (months: number) =>
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`quiero el plan de ${months} ${months === 1 ? 'mes' : 'meses'}`)}`,
 } as const;
-
-export const PHONE_DISPLAY = '+1 (305) 986-1096';
-export const PHONE_TEL = 'tel:+13059861096';
-export const MESSENGER_LINK = 'https://m.me/TotalTv2025';
 
 export const SOCIAL_LINKS = [
   {
     name: 'WhatsApp',
     url: `https://wa.me/${WHATSAPP_NUMBER}`,
-    handle: '+1 (305) 986-1096',
+    handle: '+57 300 947 6271',
     icon: 'WhatsApp',
     color: '#00E676',
   },
   {
-    name: 'Facebook',
-    url: 'https://www.facebook.com/TotalTv2025/',
-    handle: '@TotalTv2025',
-    icon: 'Facebook',
-    color: '#1877F2',
-  },
-  {
     name: 'Instagram',
-    url: 'https://www.instagram.com/tvtotalusa/',
-    handle: '@tvtotalusa',
+    url: 'https://www.instagram.com/tvtotal24/',
+    handle: '@tvtotal24',
     icon: 'Instagram',
     color: '#E4405F',
   },
   {
     name: 'Telegram',
-    url: 'https://telegram.me/TotalTvUSAbot',
-    handle: '@TotalTvUSAbot',
+    url: 'https://t.me/TvTotal24bot',
+    handle: 'TvTotal24bot',
     icon: 'Send',
     color: '#229ED9',
   },
 ];
-
-export type ConnectionCount = 1 | 2 | 3;
 
 export type PricingPlan = {
   id: string;
@@ -74,12 +62,13 @@ export type PricingPlan = {
   durationMonths: number;
   periodLabel: string;
   billingSubtitle: string;
+  price: number;
+  screens: number;
   badge?: string;
   popular?: boolean;
   bestValue?: boolean;
   savingsBadge?: string;
-  prices: Record<ConnectionCount, number>;
-  adultPrice: number;
+  binanceDiscountText: string;
   features: string[];
 };
 
@@ -90,23 +79,20 @@ export const PRICING_PLANS: PricingPlan[] = [
     durationMonths: 1,
     periodLabel: '/mes',
     billingSubtitle: 'Facturación mensual flexible',
+    price: 8,
+    screens: 3,
     badge: 'Flexibilidad Total',
     popular: false,
     bestValue: false,
-    prices: {
-      1: 9,
-      2: 12,
-      3: 15,
-    },
-    adultPrice: 0, // Incluido gratis en 1 mes
+    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
     features: [
-      'Más de 1.500 canales prémium en vivo',
-      'Eventos deportivos en directo Full HD / 4K',
-      'Miles de películas y series on-demand (VOD)',
-      'Contenido para adultos (opcional con PIN parental)',
+      '3 Pantallas o Dispositivos Simultáneos',
+      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
+      'Más de 25.000 películas y series completas on-demand',
+      'Eventos deportivos mundiales en directo a 60 FPS',
       'Guía electrónica interactiva de programación (EPG)',
-      'Servidores ultra estables con 99.9% uptime',
-      'Activación instantánea en tus dispositivos',
+      'Servidores dedicados con tecnología anti-buffering',
+      'Activación inmediata directa por WhatsApp',
     ],
   },
   {
@@ -114,24 +100,21 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: 'Plan 3 Meses',
     durationMonths: 3,
     periodLabel: '/trimestre',
-    billingSubtitle: 'Facturación cada 3 meses',
+    billingSubtitle: 'Facturación cada 3 meses ($8/mes)',
+    price: 24,
+    screens: 3,
     badge: 'El Más Popular',
     popular: true,
     bestValue: false,
-    savingsBadge: 'Ahorra $3/mes',
-    prices: {
-      1: 24, // $8/mo
-      2: 30, // $10/mo
-      3: 36, // $12/mo
-    },
-    adultPrice: 6,
+    savingsBadge: 'Ahorro Garantizado',
+    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
     features: [
-      'Todos los beneficios del Plan Mensual',
+      '3 Pantallas o Dispositivos Simultáneos',
+      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
+      'Más de 25.000 películas y series completas on-demand',
+      'Todas las ligas deportivas prémium sin cortes',
       'Acceso ininterrumpido durante 90 días',
-      'Canales deportivos prémium sin restricciones',
-      'Biblioteca VOD completa con estrenos semanales',
       'Soporte técnico prioritario 24/7 vía WhatsApp',
-      'Compatible con Smart TV, Fire Stick, Android y iOS',
       'Sin contratos obligatorios ni penalizaciones',
     ],
   },
@@ -140,25 +123,22 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: 'Plan 6 Meses',
     durationMonths: 6,
     periodLabel: '/semestre',
-    billingSubtitle: 'Facturación semestral',
-    badge: 'Gran Ahorro',
+    billingSubtitle: 'Facturación semestral ($8/mes)',
+    price: 48,
+    screens: 3,
+    badge: 'Gran Elección',
     popular: false,
     bestValue: false,
-    savingsBadge: 'Ahorra hasta $18',
-    prices: {
-      1: 48, // $8/mo
-      2: 60, // $10/mo
-      3: 72, // $12/mo
-    },
-    adultPrice: 12,
+    savingsBadge: 'Gran Ahorro Semestral',
+    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
     features: [
-      'Todos los canales prémium internacionales',
-      'Transmisiones deportivas de alta velocidad 60 FPS',
-      'Catálogo VOD ilimitado con actualizaciones automáticas',
-      'Contenido infantil, noticias, música y cultura',
-      'Atención y soporte personalizado preferencial',
-      'Reconexión automática ante fallos de internet',
-      'Garantía de servicio garantizada durante todo el ciclo',
+      '3 Pantallas o Dispositivos Simultáneos',
+      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
+      'Más de 25.000 películas y series completas on-demand',
+      'Transmisiones de alta velocidad a 60 FPS sin retraso',
+      'Catálogo VOD ilimitado con estrenos semanales',
+      'Reconexión automática y máxima estabilidad',
+      'Asistencia personalizada preferencial por WhatsApp',
     ],
   },
   {
@@ -166,25 +146,22 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: 'Plan 12 Meses',
     durationMonths: 12,
     periodLabel: '/año',
-    billingSubtitle: 'Facturación anual · Máximo valor',
+    billingSubtitle: 'Facturación anual ($7/mes · Mejor Precio)',
+    price: 84,
+    screens: 3,
     badge: 'Mejor Opción Económica',
     popular: false,
     bestValue: true,
-    savingsBadge: 'Mejor Precio Garantizado',
-    prices: {
-      1: 90,  // $7.50/mo
-      2: 105, // $8.75/mo
-      3: 120, // $10/mo
-    },
-    adultPrice: 20,
+    savingsBadge: 'Precio Más Bajo: $7/mes',
+    binanceDiscountText: '¡SUPER Descuento pagando con Binance!',
     features: [
-      'Acceso completo durante un año entero (365 días)',
-      'Máxima prioridad en servidores dedicados',
-      'Todas las ligas de fútbol, UFC, NBA, MLB y F1 en vivo',
-      'Estrenos de cine antes de que lleguen a otras plataformas',
-      'Control parental personalizable con PIN seguro',
+      '3 Pantallas o Dispositivos Simultáneos',
+      'Acceso completo durante 365 días al precio más bajo ($7/mes)',
+      'Más de 5.000 canales de TV en vivo en Full HD y 4K',
+      'Más de 25.000 películas y series completas on-demand',
+      'Máxima prioridad en servidores dedicados de alta velocidad',
+      'Estrenos cinematográficos y eventos PPV incluidos',
       'Soporte VIP inmediato vía WhatsApp exclusivo',
-      'El mayor ahorro del año con precio congelado',
     ],
   },
 ];
@@ -193,7 +170,7 @@ export const ONBOARDING_STEPS = [
   {
     number: '01',
     title: 'Elige tu Plan',
-    description: 'Selecciona la duración que prefieras y el número de pantallas simultáneas para tu hogar.',
+    description: 'Selecciona la duración que prefieras. Todos los planes incluyen 3 dispositivos simultáneos.',
     icon: 'Package',
   },
   {
@@ -205,7 +182,7 @@ export const ONBOARDING_STEPS = [
   {
     number: '03',
     title: '¡Comienza a Disfrutar!',
-    description: 'Descarga la app en tu Smart TV, Fire Stick, celular o tablet y disfruta de la mejor televisión 24/7.',
+    description: 'Conéctate en tu Smart TV, Fire Stick, celular, TV Box o PC y disfruta de más de 5.000 canales y 25.000 películas y series.',
     icon: 'Play',
   },
 ];
@@ -220,39 +197,39 @@ export type Feature = {
 export const CORE_FEATURES: Feature[] = [
   {
     icon: 'Film',
-    title: 'Todas las Plataformas en un Solo Lugar',
-    description: 'Películas, series completas y estrenos originales de las principales plataformas del mundo unificados en una sola suscripción.',
-    tag: 'TODO EN UNO',
+    title: 'Más de 25.000 Películas y Series',
+    description: 'Películas de cartelera, clásicos y temporadas completas de las principales plataformas del mundo en una sola suscripción.',
+    tag: 'CATÁLOGO VOD GIGANTE',
   },
   {
     icon: 'Trophy',
-    title: 'Deportes en Vivo y Eventos Mundiales',
-    description: 'Transmisión de las mejores ligas de fútbol, NFL, NBA, MLB, artes marciales mixtas, boxeo y Fórmula 1 en Full HD y 4K.',
-    tag: 'EVENTOS EN DIRECTO',
+    title: 'Deportes en Vivo a 60 FPS',
+    description: 'Transmisión en directo de fútbol internacional, Champions League, UFC, NBA, MLB, NFL, boxeo y Fórmula 1 en Full HD y 4K.',
+    tag: 'DEPORTES EN DIRECTO',
   },
   {
     icon: 'Tv',
-    title: 'Calidad Digital Full HD y 4K UHD',
-    description: 'Imagen ultranítida sin cortes gracias a servidores de alta capacidad con tasa de refresco a 60 cuadros por segundo.',
-    tag: 'CALIDAD HD Y 4K',
+    title: 'Más de 5.000 Canales en Vivo',
+    description: 'Señales internacionales, noticias en tiempo real, entretenimiento y cultura de América Latina, EE.UU. y Europa.',
+    tag: '+5.000 CANALES',
   },
   {
     icon: 'Layers',
-    title: 'Biblioteca VOD en Constante Actualización',
-    description: 'Miles de películas y temporadas completas de series actualizadas permanentemente con audio latino original y subtítulos.',
-    tag: 'ESTRENOS SEMANALES',
+    title: '3 Pantallas Incluidas en Todos los Planes',
+    description: 'Sin costos extra ni configuraciones complejas. Disfruta con tu familia en 3 pantallas al mismo tiempo.',
+    tag: '3 PANTALLAS SIMULTÁNEAS',
   },
   {
     icon: 'Smartphone',
-    title: 'Compatibilidad Total Multidispositivo',
-    description: 'Disfruta en Smart TV (Samsung, LG, Sony), Amazon Fire TV Stick, TV Box, celulares Android, iPhone, iPad y PC.',
-    tag: 'MULTIDISPOSITIVO',
+    title: 'Compatibilidad Multidispositivo Total',
+    description: 'Compatible con Smart TVs (Samsung, LG, Sony, TCL), Amazon Fire TV Stick, TV Box, Android, iPhone, iPad y PC.',
+    tag: 'UNIVERSAL',
   },
   {
     icon: 'Bot',
-    title: 'Soporte y Asistencia 24/7 en Español',
-    description: 'Respuestas inmediatas por WhatsApp para resolver dudas de instalación, activación y soporte en cualquier momento.',
-    tag: 'ATENCIÓN CONTINUA',
+    title: 'Soporte Directo y Asistencia Técnica',
+    description: 'Atención personalizada e inmediata por WhatsApp (+57 300 947 6271) para instalación, dudas y soporte.',
+    tag: 'SOPORTE WHATSAPP',
   },
 ];
 
@@ -286,12 +263,12 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
     id: 'movies',
     category: 'Cine y Estrenos Mundiales',
-    title: 'Los Grandes Éxitos de Cartelera en Casa',
+    title: 'Más de 25.000 Películas y Series en Casa',
     badge: 'CINE EN 4K Y FHD',
     description: 'Estrenos recién salidos del cine, clásicos inolvidables, sagas completas y producciones galardonadas sin pagar suscripciones adicionales.',
     image: MOVIES_IMAGE,
     highlights: [
-      'Nuevos estrenos agregados permanentemente',
+      'Más de 25.000 contenidos actualizados constantemente',
       'Producciones seleccionadas en auténtico 4K Ultra HD',
       'Audio original en español latino y subtítulos sincronizados',
       'Buscador rápido por género, año y actores',
@@ -316,12 +293,12 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
   {
     id: 'livetv',
     category: 'Canales en Vivo de Todo el Mundo',
-    title: 'Más de 1.500 Canales Internacionales en Vivo',
+    title: 'Más de 5.000 Canales de TV en Vivo',
     badge: 'TELEVISIÓN EN VIVO 24/7',
     description: 'Accede a la mejor televisión de Estados Unidos, América Latina y Europa con señal estable y guía de programación en pantalla.',
     image: NEWS_IMAGE,
     highlights: [
-      'Canales de noticias, entretenimiento y cultura',
+      'Más de 5.000 canales de televisión en vivo',
       'Señales locales y nacionales de toda Latinoamérica',
       'Guía electrónica interactiva de horarios (EPG)',
       'Tecnología anti-buffering de máxima estabilidad',
@@ -357,24 +334,24 @@ export const WHY_CHOOSE_US = [
     icon: 'Calendar',
   },
   {
-    title: 'Soporte 24/7 en Español',
-    description: 'Atención personalizada en español a través de WhatsApp. Te asistimos en la instalación, configuración y resolución de cualquier duda.',
-    icon: 'Headphones',
+    title: 'Soporte Directo por WhatsApp',
+    description: 'Asistencia técnica personalizada y rápida a través de WhatsApp (+57 300 947 6271) para resolver cualquier inquietud.',
+    icon: 'MessageSquare',
   },
   {
-    title: 'Sin Contratos ni Letras Chicas',
-    description: 'Pagas únicamente por el período que decides utilizar. Sin penalizaciones por cancelación ni cargos ocultos.',
-    icon: 'ShieldCheck',
-  },
-  {
-    title: 'Múltiples Pantallas Simultáneas',
-    description: 'Disfruta de diferentes contenidos al mismo tiempo en la sala, recámara o en tu celular con hasta 3 conexiones simultáneas.',
+    title: '3 Dispositivos Incluidos',
+    description: 'Disfruta en 3 pantallas simultáneas en todos nuestros planes sin ningún costo adicional para tu familia.',
     icon: 'Tv',
   },
   {
-    title: 'Compatibilidad Universal',
-    description: 'Instala fácilmente en Smart TVs Samsung, LG, Android TV, Fire TV Stick, Chromecast, Roku, celulares, tablets y PC.',
-    icon: 'Smartphone',
+    title: 'Súper Descuento con Binance',
+    description: 'Paga con Binance Pay o Criptomonedas y recibe descuentos especiales exclusivos en tu suscripción.',
+    icon: 'CreditCard',
+  },
+  {
+    title: 'Actualizaciones Constantes',
+    description: 'Nuevos canales en vivo, eventos deportivos y títulos de cine agregados periódicamente a tu catálogo.',
+    icon: 'RefreshCw',
   },
 ];
 
@@ -396,149 +373,143 @@ export const DEVICE_CATEGORIES: DeviceCategory[] = [
     subtitle: 'Reproducción Directa',
     icon: 'Tv',
     badge: 'Sin Cables Extra',
-    description: 'Disfruta directamente en tu televisor inteligente sin necesidad de cables ni cajas adicionales.',
+    description: 'Transmite directamente en tu televisor sin necesidad de cables externos ni decodificadores adicionales.',
     examples: [
       'Samsung Smart TV (Tizen OS)',
       'LG Smart TV (webOS)',
       'Android TV & Google TV',
-      'Sony, TCL, Hisense, Xiaomi y Philips',
-      'Roku TV integrado',
+      'Sony, Sharp, Philips, Hisense y TCL',
+      'Xiaomi TV & Fire TV integrado',
     ],
     popularApps: ['IPTV Smarters Pro', 'IBO Player', 'SET IPTV', 'Nanomid Player'],
   },
   {
     id: 'boxes',
-    title: 'TV Boxes y Sticks',
-    subtitle: 'Conectar y Reproducir',
+    title: 'TV Boxes & Sticks',
+    subtitle: 'Plug & Play Streaming',
     icon: 'Flame',
-    badge: 'Máximo Rendimiento 4K',
-    description: 'Dispositivos portátiles de alta velocidad para reproducir en 4K UHD con fluidez total.',
+    badge: 'Rendimiento 4K Ultra',
+    description: 'Dispositivos de transmisión de alto rendimiento y máxima fluidez para canales en 4K UHD y 60 FPS.',
     examples: [
       'Amazon Fire TV Stick (Lite, 4K, 4K Max, Cube)',
       'Chromecast con Google TV',
       'Xiaomi Mi Box & Mi TV Stick',
-      'Apple TV 4K y Apple TV HD',
-      'Android TV Box (Nvidia Shield, Mecool, etc.)',
+      'Apple TV HD & Apple TV 4K (tvOS)',
+      'Android TV Box (Nvidia Shield, MECOOL)',
     ],
-    popularApps: ['TiviMate IPTV', 'IPTV Smarters Pro', 'XCIPTV', 'iPlayTV'],
+    popularApps: ['TiviMate IPTV', 'IPTV Smarters Pro', 'XCIPTV', 'iPlayTV', 'OTT Navigator'],
   },
   {
     id: 'mobile',
     title: 'Celulares y Tablets',
-    subtitle: 'Televisión Portátil',
+    subtitle: 'Libertad Portátil',
     icon: 'Smartphone',
-    badge: 'Llévalo Donde Quieras',
-    description: 'Tus canales y películas favoritas en cualquier lugar a través de tu conexión WiFi o datos móviles.',
+    badge: 'Lleva tu TV Contigo',
+    description: 'Lleva tu programación completa, eventos deportivos en directo y películas a donde vayas en tu móvil.',
     examples: [
-      'Celulares Android (Samsung, Xiaomi, Motorola, etc.)',
-      'Tablets Android y Samsung Galaxy Tab',
-      'iPhone (todos los modelos compatibles)',
-      'iPad y iPad Pro',
+      'Smartphones Android (Samsung, Xiaomi, Motorola, Pixel)',
+      'Tablets Android & Amazon Fire Tablets',
+      'Apple iPhone (iOS 13+)',
+      'Apple iPad & iPad Pro (iPadOS)',
     ],
-    popularApps: ['IPTV Smarters Pro', 'GSE Smart IPTV', 'XCIPTV', '247 IPTV Player'],
+    popularApps: ['Smarters Player Lite', 'GSE Smart IPTV', '247 IPTV Player', 'VLC Mobile'],
   },
   {
-    id: 'pc',
-    title: 'Computadoras',
-    subtitle: 'Navegador y Reproductores',
+    id: 'computers',
+    title: 'Computadoras (PC & Mac)',
+    subtitle: 'Acceso Web y Escritorio',
     icon: 'Monitor',
-    badge: 'Windows y Mac',
-    description: 'Acceso directo en laptops y equipos de escritorio con reproductores avanzados de video.',
+    badge: 'Navegador y Apps',
+    description: 'Disfruta directamente desde tu navegador web o con reproductores multimedia dedicados para escritorio.',
     examples: [
-      'Windows 10 / 11 (PC y Laptops)',
-      'Apple Mac (macOS MacBook, iMac, Mac Mini)',
-      'Linux y navegadores web modernos',
+      'Windows 10 & 11 (PC de escritorio y laptops)',
+      'macOS (MacBook Air, MacBook Pro, iMac, Mac Mini)',
+      'Sistemas Linux (Ubuntu, Debian, Fedora)',
     ],
-    popularApps: ['VLC Media Player', 'IPTV Smarters Web/App', 'MyIPTV Player'],
+    popularApps: ['Navegador Web (Chrome, Edge, Safari)', 'VLC Media Player', 'IPTV Smarters PC/Mac'],
   },
 ];
 
-export const COMPATIBLE_DEVICES = [
-  {
-    name: 'Smart TVs',
-    types: 'Samsung (Tizen), LG (webOS), Sony, Hisense, TCL',
-    icon: 'Tv',
-    popular: true,
-  },
-  {
-    name: 'Amazon Fire TV',
-    types: 'Fire TV Stick Lite, 4K, 4K Max, Fire Cube',
-    icon: 'Flame',
-    popular: true,
-  },
-  {
-    name: 'Android TV & Box',
-    types: 'Xiaomi Mi Box, Mecool, Chromecast con Google TV',
-    icon: 'Box',
-    popular: true,
-  },
-  {
-    name: 'Teléfonos & Tablets',
-    types: 'Android (Samsung, Xiaomi, Motorola) y Apple iOS (iPhone, iPad)',
-    icon: 'Smartphone',
-    popular: false,
-  },
-  {
-    name: 'Computadoras',
-    types: 'Windows, macOS, Linux y reproductores VLC/Web',
-    icon: 'Laptop',
-    popular: false,
-  },
-  {
-    name: 'Dispositivos Apple',
-    types: 'Apple TV 4K, iPad, iPhone, Mac (IPTV Smarters, GSE, etc.)',
-    icon: 'Cast',
-    popular: false,
-  },
+export type Device = {
+  name: string;
+  icon: string;
+  desc: string;
+};
+
+export const DEVICES: Device[] = [
+  { name: 'Amazon Firestick 4K', icon: 'Flame', desc: 'Configuración rápida con TiviMate o Smarters Pro' },
+  { name: 'Samsung Smart TV', icon: 'Tv', desc: 'Reproducción directa en Samsung Tizen OS' },
+  { name: 'LG Smart TV', icon: 'Tv', desc: 'Acceso directo desde LG webOS' },
+  { name: 'Android TV & Google TV', icon: 'Tv', desc: 'Sony, TCL, Philips, Chromecast & TV boxes' },
+  { name: 'Apple TV 4K', icon: 'Tv', desc: 'Máximo rendimiento y calidad en tvOS' },
+  { name: 'Celulares Android & iPhone', icon: 'Smartphone', desc: 'Lleva la televisión a donde vayas' },
+  { name: 'PC & Mac', icon: 'Monitor', desc: 'Reproducción en pantalla grande vía app o web' },
 ];
 
-export const TESTIMONIALS = [
+export type Testimonial = {
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+  device: string;
+  avatarText: string;
+};
+
+export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Carlos Mendoza',
-    location: 'Miami, Florida',
-    rating: 5,
+    location: 'Bogotá, Colombia',
+    rating: 5.0,
+    text: 'Increíble calidad. La transmisión de los partidos de fútbol y la Champions en 60 FPS es súper fluida, sin cortes. Además el pago con Binance fue facilísimo y con descuento.',
+    device: 'Amazon Fire TV Stick 4K',
     avatarText: 'CM',
-    device: 'Fire TV Stick 4K',
-    text: 'Excelente servicio. Llevo 8 meses con TvTotal24 en mi Fire Stick y los partidos de la Champions se ven sin ningún corte en 4K. La atención por WhatsApp fue inmediata para configurar mi televisor.',
   },
   {
     name: 'Mariana Gómez',
-    location: 'Houston, Texas',
-    rating: 5,
+    location: 'Ciudad de México, México',
+    rating: 5.0,
+    text: 'Mis hijos adoran las películas y series animadas. La instalación nos tomó menos de 5 minutos gracias a la asesoría por WhatsApp. Servicio 100% recomendado.',
+    device: 'Samsung Smart TV 55"',
     avatarText: 'MG',
-    device: 'Samsung Smart TV',
-    text: 'Cancelé el cable tradicional y me ahorro más de $90 al mes. Toda la familia tiene sus canales favoritos y mis hijos ven sus caricaturas en sus tablets sin pelear por el control remoto.',
   },
   {
-    name: 'Roberto Salcedo',
-    location: 'Los Ángeles, California',
-    rating: 5,
-    avatarText: 'RS',
-    device: 'Android TV Box',
-    text: 'Lo probé con la demo gratis de prueba y quedé convencido al instante. La biblioteca de películas está al día con los últimos estrenos del cine. 100% recomendado.',
+    name: 'Andrés Villalba',
+    location: 'Miami, Florida',
+    rating: 4.9,
+    text: 'Cancelé mi suscripción tradicional de cable hace meses. Con TvTotal24 tengo más de 5.000 canales y 3 pantallas simultáneas para toda mi casa a una fracción del precio.',
+    device: 'Apple TV 4K',
+    avatarText: 'AV',
   },
   {
-    name: 'Elena Paredes',
-    location: 'Orlando, Florida',
-    rating: 5,
-    avatarText: 'EP',
+    name: 'Lucía Fernández',
+    location: 'Buenos Aires, Argentina',
+    rating: 5.0,
+    text: 'Probé primero la prueba gratis y quedé encantada. La atención por WhatsApp fue inmediata y el catálogo tiene más de 25.000 películas y series completas.',
+    device: 'Chromecast con Google TV',
+    avatarText: 'LF',
+  },
+  {
+    name: 'Roberto Salazar',
+    location: 'Santiago, Chile',
+    rating: 4.9,
+    text: 'Muy estable y con más de 25.000 contenidos. Podemos ver en 3 televisores al mismo tiempo sin que se caiga la señal. Excelente plataforma.',
     device: 'Smart TV LG',
-    text: 'La guía de canales en español latinoamericano está súper completa. Puedo ver los noticieros de mi país de origen y todas mis telenovelas favoritas en mi Smart TV Samsung.',
+    avatarText: 'RS',
   },
 ];
 
 export const FAQS = [
   {
     question: '¿Qué es TvTotal24 y cómo funciona?',
-    answer: 'TvTotal24 es una plataforma de televisión en vivo y entretenimiento streaming por suscripción. Funciona a través de tu conexión a internet existente (banda ancha o WiFi), permitiéndote ver más de 1.500 canales prémium, deportes y miles de películas y series en cualquier dispositivo compatible.',
+    answer: 'TvTotal24 es una plataforma de televisión en vivo y entretenimiento streaming por suscripción. Funciona a través de tu conexión a internet existente (banda ancha o WiFi), permitiéndote ver más de 5.000 canales de TV en vivo, eventos deportivos en directo y más de 25.000 películas y series en cualquier dispositivo compatible.',
   },
   {
     question: '¿Puedo solicitar una prueba gratis antes de comprar?',
-    answer: '¡Por supuesto! Ofrecemos una demostración gratuita sin compromiso para que compruebes la calidad de imagen, velocidad y catálogo en tu propio dispositivo antes de elegir un plan.',
+    answer: '¡Por supuesto! Ofrecemos una prueba gratis para que compruebes la calidad de imagen, velocidad y catálogo en tu propio dispositivo antes de elegir un plan. Solicítala directamente por WhatsApp.',
   },
   {
     question: '¿Cuántos dispositivos puedo conectar al mismo tiempo?',
-    answer: 'Nuestros planes te permiten elegir entre 1, 2 o hasta 3 pantallas en simultáneo. Cada miembro de la familia puede ver lo que quiera al mismo tiempo en diferentes televisores o dispositivos móviles.',
+    answer: 'Todos nuestros planes incluyen 3 pantallas o dispositivos simultáneos por defecto. Toda tu familia puede disfrutar al mismo tiempo en sus televisores o dispositivos móviles sin ningún costo adicional.',
   },
   {
     question: '¿Qué velocidad de internet necesito?',
@@ -550,15 +521,15 @@ export const FAQS = [
   },
   {
     question: '¿Hay contratos obligatorios o penalizaciones?',
-    answer: 'Ninguno. No tenemos contratos a largo plazo ni cargos ocultos. Tú decides cuándo renovar tu suscripción de acuerdo con tus necesidades.',
+    answer: 'Ninguno. No tenemos contratos a largo plazo ni cargos ocultos. Tú decides cuándo renovar tu suscripción con total libertad.',
   },
   {
     question: '¿Cómo recibo mis credenciales una vez que contrato el servicio?',
-    answer: 'Inmediatamente después de confirmar tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión) junto a la guía de instalación rápida por WhatsApp.',
+    answer: 'Inmediatamente después de confirmar tu suscripción, nuestro equipo de atención al cliente te envía tus credenciales de acceso (usuario, contraseña y URL de conexión) junto a la guía de instalación rápida por WhatsApp (+57 300 947 6271).',
   },
   {
     question: '¿Qué métodos de pago aceptan?',
-    answer: 'Aceptamos transferencias Zelle, tarjetas de débito/crédito, transferencias bancarias locales y criptomonedas. Puedes coordinar tu método de pago preferido directamente por WhatsApp.',
+    answer: 'Aceptamos Binance Pay (¡con un SÚPER descuento exclusivo!), transferencias Zelle, tarjetas de débito/crédito, transferencias bancarias locales y criptomonedas. Puedes coordinar tu pago y consultar tu descuento directamente por WhatsApp.',
   },
 ];
 

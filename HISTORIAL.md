@@ -119,6 +119,50 @@ TvTotal24/
 
 ## 📝 4. Bitácora de Cambios
 
+### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado
+
+#### 🚀 Ajustes y Mejoras Implementadas:
+1. **Canal Centralizado de WhatsApp (+573009476271):**
+   - Actualización del número oficial de atención: `+57 300 947 6271` (`https://wa.me/573009476271`).
+   - Todos los enlaces de prueba gratuita, botón flotante de chat y asistencia técnica van directamente a WhatsApp sin modales intermedios.
+   - Mensaje para prueba gratis: `¡Hola TvTotal24! Quiero solicitar la prueba gratis.`
+   - Mensaje para soporte/asistencia técnica: `¡Hola TvTotal24! Necesito asistencia técnica con mi servicio.`
+
+2. **Logotipo Oficial de TvTotal24 Mucho Más Grande:**
+   - Ampliación sustancial del tamaño del logo en el Header (`h-14 sm:h-18 md:h-20 lg:h-22`) con sombra de resplandor neón verde esmeralda.
+   - Inclusión de un logotipo protagónico gigante y centrado en la sección Hero (`h-24 sm:h-32 md:h-44`) con efectos de iluminación ambiental.
+   - Logo ampliado en el Preloader (`index.html`), Footer y Centro Legal (`LegalPage.tsx`).
+
+3. **Planes con 3 Pantallas Incluidas por Defecto y Nuevos Precios:**
+   - Todos los planes incluyen 3 pantallas/dispositivos simultáneos (sin selectores de pantalla que confundan al cliente).
+   - Se eliminó cualquier mención o toggle de contenido para adultos (es gratuito e incluido por defecto).
+   - Estructura de precios actualizada:
+     - **Plan 1 Mes:** $8 USD
+     - **Plan 3 Meses:** $24 USD ($8/mes)
+     - **Plan 6 Meses:** $48 USD ($8/mes)
+     - **Plan 12 Meses:** $84 USD (solo $7/mes · Mejor Precio y Ahorro)
+   - Botón directo de contratación a WhatsApp con el texto exacto: `quiero el plan de X meses` (ej. `quiero el plan de 1 mes`, `quiero el plan de 3 meses`, etc.).
+   - Eliminación de la tabla matriz expandible de precios por pantalla.
+
+4. **Súper Descuento Pagando con Binance:**
+   - Incorporación de un banner promocional exclusivo y llamativo en tono oro/cripto dentro de la sección de Precios destacando el **SÚPER Descuento al pagar con Binance Pay o Criptomonedas**.
+   - Cada tarjeta de plan cuenta con un distintivo visual que resalta el beneficio con Binance y botón directo de consulta a WhatsApp.
+
+5. **Actualización de Canales y Contenido:**
+   - Cifras actualizadas en todo el sitio, metadatos y SEO a **más de 5.000 canales de televisión en vivo** y **más de 25.000 películas y series completas**.
+
+6. **Canales de Redes y Comunidad ("Únete y Síguenos"):**
+   - Redes actualizadas a los canales oficiales:
+     - **WhatsApp:** `+57 300 947 6271`
+     - **Instagram:** `@tvtotal24` (`https://www.instagram.com/tvtotal24/`)
+     - **Telegram:** `TvTotal24bot` (`https://t.me/TvTotal24bot`)
+   - Eliminación definitiva de Facebook y Facebook Messenger.
+
+7. **Prueba Gratis sin Mención de Duración:**
+   - Se retiró cualquier mención a duración ("24 horas", "24h"), quedando unificado como **"Prueba Gratis"** o **"Demostración Gratuita"** en todas las secciones, botones, pie de página y metadatos.
+
+---
+
 ### [2026-10-16] - Adaptación y Construcción Integral del Sitio Web TvTotal24 y Despliegue en Producción
 
 #### 🚀 Despliegue a Producción:
