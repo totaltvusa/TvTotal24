@@ -192,6 +192,11 @@ TvTotal24/
     - Se actualizaron todos los botones de compra de *"Contratar Plan"* a **"Quiero este"**.
     - Se añadió al **Plan 6 Meses** la oferta especial de Binance a solo **$27 USD** (estándar $48 USD).
 
+19. **Botón Flotante de WhatsApp Desplazable (Draggable):**
+    - Se implementó funcionalidad de arrastre libre (`drag` con Framer Motion) en el componente flotante de WhatsApp.
+    - El usuario puede mantenerlo presionado y moverlo a cualquier área de la pantalla (tanto en computadores como en teléfonos y tablets) para leer cómodamente el contenido subyacente.
+    - Cuenta con límites de pantalla (`dragConstraints`), fijación exacta en la posición soltada (`dragMomentum={false}`), respuesta táctil optimizada (`touch-none`) y prevención de apertura accidental de WhatsApp durante el arrastre.
+
 ---
 
 ### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado
