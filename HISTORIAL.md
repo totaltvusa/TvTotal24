@@ -203,6 +203,11 @@ TvTotal24/
     - La web ahora carga y despliega de manera instantánea, nítida y fluida en iPhone y cualquier dispositivo móvil.
     - Compatibilidad de video para iOS WebKit: configuración explícita de `muted = true` y `webkit-playsinline` para garantizar reproducción automática sin bloqueos.
 
+21. **Apertura Predeterminada Siempre en Modo Oscuro (Sin Persistencia al Recargar):**
+    - La página web **siempre abre en modo oscuro** por defecto, de forma totalmente independiente a la configuración del sistema operativo (`prefers-color-scheme`).
+    - El usuario puede alternar a *Modo Claro* con el botón correspondiente durante su navegación si lo desea.
+    - Al recargar la página (*Reload* o *F5*) o abrirla en una nueva pestaña, el sitio web se inicializa nuevamente en **modo oscuro**, asegurando coherencia visual con la identidad de marca obsidian/neon green de TvTotal24.
+
 ---
 
 ### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado

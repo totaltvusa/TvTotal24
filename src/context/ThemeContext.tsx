@@ -11,14 +11,8 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('tvtotal24_theme') as Theme;
-      if (stored === 'dark' || stored === 'light') return stored;
-      return 'dark'; // Default dark obsidian mode
-    }
-    return 'dark';
-  });
+  // Always initialize in dark mode regardless of system or previous sessions
+  const [theme, setThemeState] = useState<Theme>('dark');
 
   useEffect(() => {
     const root = document.documentElement;
@@ -29,7 +23,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       root.classList.add('light');
       root.classList.remove('dark');
     }
-    localStorage.setItem('tvtotal24_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

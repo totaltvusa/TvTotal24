@@ -15,14 +15,10 @@
     <script>
       (function() {
         try {
-          var theme = localStorage.getItem('tvtotal24_theme');
-          if (theme === 'light') {
-            document.documentElement.classList.remove('dark');
-            document.documentElement.classList.add('light');
-          } else {
-            document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
-          }
+          // Always ensure the page opens in dark mode regardless of system settings or previous sessions
+          localStorage.removeItem('tvtotal24_theme');
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
         } catch(e) {}
       })();
     </script>
