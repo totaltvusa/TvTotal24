@@ -41,68 +41,8 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* Instant Lightweight Preloader */
-      #tvtotal24-preloader {
-        position: fixed;
-        inset: 0;
-        z-index: 99999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #020604;
-        transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
-      }
-      #tvtotal24-preloader.fade-out {
-        opacity: 0;
-        visibility: hidden;
-      }
-      .preloader-glow {
-        position: relative;
-        width: 64px;
-        height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .preloader-glow::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(0, 230, 118, 0.4) 0%, transparent 70%);
-        animation: preloader-pulse 2s infinite ease-in-out;
-      }
-      .preloader-spinner {
-        width: 44px;
-        height: 44px;
-        border: 3px solid rgba(0, 230, 118, 0.15);
-        border-top-color: #00e676;
-        border-radius: 50%;
-        animation: preloader-spin 0.85s linear infinite;
-      }
-      @keyframes preloader-spin {
-        to { transform: rotate(360deg); }
-      }
-      @keyframes preloader-pulse {
-        0%, 100% { transform: scale(0.9); opacity: 0.5; }
-        50% { transform: scale(1.2); opacity: 1; }
-      }
-    </style>
   </head>
   <body class="bg-slate-50 dark:bg-obsidian-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-neon-electric selection:text-black transition-colors duration-300">
-    <!-- Instant Fast Preloader -->
-    <div id="tvtotal24-preloader">
-      <img src="/images/logo-transparent.png" alt="TvTotal24" style="height: 64px; width: auto; object-fit: contain; margin-bottom: 18px; filter: drop-shadow(0 0 16px rgba(0,230,118,0.5));" />
-      <div class="preloader-glow">
-        <div class="preloader-spinner"></div>
-      </div>
-      <p style="margin-top: 16px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.14em; color: #00e676; text-transform: uppercase;">
-        Cargando TvTotal24...
-      </p>
-    </div>
-
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

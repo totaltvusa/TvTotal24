@@ -185,10 +185,23 @@ export default function DynamicHeroCarousel({
           {isCurrentVideo ? (
             <video
               key={currentMedia}
+              ref={(el) => {
+                if (el) {
+                  el.muted = true;
+                  el.defaultMuted = true;
+                  const playPromise = el.play();
+                  if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                      // Autoplay caught silently
+                    });
+                  }
+                }
+              }}
               src={currentMedia}
               autoPlay
               muted
               playsInline
+              webkit-playsinline="true"
               onEnded={advanceSlide}
               onError={advanceSlide}
               className="w-full h-full object-contain bg-black"

@@ -192,10 +192,16 @@ TvTotal24/
     - Se actualizaron todos los botones de compra de *"Contratar Plan"* a **"Quiero este"**.
     - Se añadió al **Plan 6 Meses** la oferta especial de Binance a solo **$27 USD** (estándar $48 USD).
 
-19. **Botón Flotante de WhatsApp Desplazable (Draggable):**
-    - Se implementó funcionalidad de arrastre libre (`drag` con Framer Motion) en el componente flotante de WhatsApp.
-    - El usuario puede mantenerlo presionado y moverlo a cualquier área de la pantalla (tanto en computadores como en teléfonos y tablets) para leer cómodamente el contenido subyacente.
-    - Cuenta con límites de pantalla (`dragConstraints`), fijación exacta en la posición soltada (`dragMomentum={false}`), respuesta táctil optimizada (`touch-none`) y prevención de apertura accidental de WhatsApp durante el arrastre.
+19. **Botón Flotante de WhatsApp Desplazable Universal (Pointer Events API):**
+    - Se rediseñó el sistema de arrastre utilizando la API universal de **Pointer Events** (`pointerdown`, `pointermove`, `pointerup`) con captura de puntero (`setPointerCapture`).
+    - **Solución para Google Chrome y Firefox en PC:** Se eliminó la intercepción nativa de arrastre de hipervínculos HTML5 que bloqueaba el movimiento en navegadores de escritorio.
+    - **Diferenciación exacta entre Toque/Clic y Arrastre:** Si el movimiento es menor a 5px, se activa como clic directo hacia WhatsApp (+573009476271); si el desplazamiento supera 5px, se mueve suavemente por la pantalla sin activar WhatsApp por error.
+    - **Límites automáticos de pantalla:** Clamping inteligente contra `window.innerWidth` y `window.innerHeight` con margen de seguridad de 16px en todos los extremos, adaptable a cambios de tamaño o rotación.
+
+20. **Optimización de Carga Inmediata y Soporte iPhone / Safari:**
+    - Se eliminó por completo el preloader estático bloqueante (`#tvtotal24-preloader`) que generaba pantalla negra, retenía la pantalla en iOS Safari y cargaba un archivo pesado innecesario.
+    - La web ahora carga y despliega de manera instantánea, nítida y fluida en iPhone y cualquier dispositivo móvil.
+    - Compatibilidad de video para iOS WebKit: configuración explícita de `muted = true` y `webkit-playsinline` para garantizar reproducción automática sin bloqueos.
 
 ---
 

@@ -66,21 +66,6 @@ function AppContent() {
     };
   }, []);
 
-  // Dismiss instant preloader smoothly once app mounts
-  useEffect(() => {
-    const preloader = document.getElementById('tvtotal24-preloader');
-    if (preloader && !preloader.classList.contains('fade-out')) {
-      const timer = setTimeout(() => {
-        preloader.classList.add('fade-out');
-        setTimeout(() => {
-          if (preloader.parentNode) {
-            preloader.parentNode.removeChild(preloader);
-          }
-        }, 550);
-      }, 250);
-      return () => clearTimeout(timer);
-    }
-  }, []);
 
   const handleNavigateLegal = (section: LegalSection) => {
     setLegalSection(section);
