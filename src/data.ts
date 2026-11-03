@@ -43,11 +43,11 @@ export const SOCIAL_LINKS = [
     color: '#00E676',
   },
   {
-    name: 'Correo',
-    url: `mailto:${CONTACT_EMAIL}`,
-    handle: CONTACT_EMAIL,
-    icon: 'Mail',
-    color: '#059669',
+    name: 'Instagram',
+    url: 'https://www.instagram.com/tvtotal24/',
+    handle: '@tvtotal24',
+    icon: 'Instagram',
+    color: '#E4405F',
   },
   {
     name: 'Telegram',
@@ -55,13 +55,6 @@ export const SOCIAL_LINKS = [
     handle: 'TvTotal24bot',
     icon: 'Send',
     color: '#229ED9',
-  },
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/tvtotal24/',
-    handle: '@tvtotal24',
-    icon: 'Instagram',
-    color: '#E4405F',
   },
 ];
 

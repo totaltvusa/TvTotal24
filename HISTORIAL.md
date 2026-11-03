@@ -209,11 +209,11 @@ TvTotal24/
     - Al recargar la página (*Reload* o *F5*) o abrirla en una nueva pestaña, el sitio web se inicializa nuevamente en **modo oscuro**, asegurando coherencia visual con la identidad de marca obsidian/neon green de TvTotal24.
 
 22. **Integración del Correo Electrónico Oficial (email@tvtotal24.com):**
-    - Se incorporó la dirección oficial `email@tvtotal24.com` (`mailto:email@tvtotal24.com`) como canal formal de comunicación en todo el sitio web.
-    - **Footer / Pie de página:** Añadido bloque de contacto directo bajo la sección *Atención y Asistencia Técnica*.
-    - **Comunidad y Canales Sociales:** Integración como cuarta tarjeta oficial de comunicación en la sección *Comunidad TvTotal24* con enlace directo `mailto`.
-    - **Preguntas Frecuentes (FAQ):** Incorporado en la tarjeta de contacto inferior como opción de contacto rápido mediante botón *Enviar Correo* junto a WhatsApp.
-    - **Centro Legal y DMCA:** Actualizada la dirección formal del agente designado DMCA y el apartado de derechos de privacidad para solicitudes de usuarios.
+    - Se incorporó la dirección oficial `email@tvtotal24.com` (`mailto:email@tvtotal24.com`) como canal formal de comunicación en el sitio web.
+    - **Footer / Pie de página:** Bloque de contacto directo bajo la sección *Atención y Asistencia Técnica*.
+    - **Preguntas Frecuentes (FAQ):** Incorporado en la tarjeta de soporte con enlace y botón *Enviar Correo* junto a WhatsApp.
+    - **Centro Legal y DMCA:** Actualizada la dirección formal del agente designado DMCA y apartado de derechos de privacidad.
+    - **Sección Comunidad:** Se preserva exclusivamente para redes sociales (WhatsApp, Instagram, Telegram).
 
 ---
 
