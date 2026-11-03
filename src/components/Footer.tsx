@@ -1,8 +1,9 @@
-import { ShieldCheck, Sparkles, MessageCircle } from 'lucide-react';
+import { ShieldCheck, Sparkles, MessageCircle, Mail } from 'lucide-react';
 import {
   LOGO_URL,
   NAV_LINKS,
   WHATSAPP_LINKS,
+  CONTACT_EMAIL,
 } from '@/data';
 import { WhatsAppIcon, TelegramIcon, InstagramIcon } from './SocialIcons';
 
@@ -88,6 +89,20 @@ export default function Footer({ onNavigateLegal }: FooterProps = {}) {
                 <div>
                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">WhatsApp Oficial</div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white">Chat y Atención 24/7</div>
+                </div>
+              </a>
+
+              {/* Email link */}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass border border-emerald-500/30 dark:border-neon-emerald/30 text-sm font-semibold text-slate-800 dark:text-white hover:bg-emerald-500/10 dark:hover:bg-neon-emerald/10 shadow-sm transition-all"
+              >
+                <div className="w-8 h-8 rounded-xl bg-emerald-500/20 dark:bg-neon-emerald/20 flex items-center justify-center text-emerald-600 dark:text-neon-emerald">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Correo Electrónico</div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white">{CONTACT_EMAIL}</div>
                 </div>
               </a>
 

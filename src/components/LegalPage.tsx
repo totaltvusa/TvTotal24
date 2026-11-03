@@ -10,7 +10,7 @@ import {
   Mail,
   Scale,
 } from 'lucide-react';
-import { LOGO_URL } from '@/data';
+import { LOGO_URL, CONTACT_EMAIL } from '@/data';
 import ThemeToggle from './ThemeToggle';
 
 type LegalSection = 'privacy' | 'terms' | 'dmca';
@@ -198,7 +198,7 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
               4. Tus Derechos de Privacidad
             </h3>
             <p>
-              Tienes el derecho de solicitar el acceso a los datos de contacto asociados a tu cuenta o la supresión de tu historial de mensajería al finalizar tu ciclo de suscripción. Para optar por no recibir notificaciones de renovación o promociones, solo indícalo a nuestro equipo de atención por WhatsApp.
+              Tienes el derecho de solicitar el acceso a los datos de contacto asociados a tu cuenta o la supresión de tu historial de mensajería al finalizar tu ciclo de suscripción. Para optar por no recibir notificaciones de renovación o promociones, solo indícalo a nuestro equipo de atención por WhatsApp o enviando un mensaje a <a href={`mailto:${CONTACT_EMAIL}`} className="text-emerald-600 dark:text-neon-emerald font-semibold hover:underline">{CONTACT_EMAIL}</a>.
             </p>
           </div>
         </section>
@@ -356,12 +356,12 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Correo del Agente DMCA Designado</div>
-                  <div className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">totaltvusa@gmail.com</div>
+                  <div className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">{CONTACT_EMAIL}</div>
                 </div>
               </div>
 
               <a
-                href="mailto:totaltvusa@gmail.com?subject=Notificacion%20DMCA%20TvTotal24"
+                href={`mailto:${CONTACT_EMAIL}?subject=Notificacion%20DMCA%20TvTotal24`}
                 className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neon-emerald to-emerald-500 text-obsidian-950 text-xs sm:text-sm font-black shadow-lg hover:scale-105 transition-transform"
               >
                 Enviar Notificación DMCA

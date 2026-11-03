@@ -32,6 +32,8 @@ export const WHATSAPP_LINKS = {
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`quiero el plan de ${months} ${months === 1 ? 'mes' : 'meses'}`)}`,
 } as const;
 
+export const CONTACT_EMAIL = 'email@tvtotal24.com';
+
 export const SOCIAL_LINKS = [
   {
     name: 'WhatsApp',
@@ -41,11 +43,11 @@ export const SOCIAL_LINKS = [
     color: '#00E676',
   },
   {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/tvtotal24/',
-    handle: '@tvtotal24',
-    icon: 'Instagram',
-    color: '#E4405F',
+    name: 'Correo',
+    url: `mailto:${CONTACT_EMAIL}`,
+    handle: CONTACT_EMAIL,
+    icon: 'Mail',
+    color: '#059669',
   },
   {
     name: 'Telegram',
@@ -53,6 +55,13 @@ export const SOCIAL_LINKS = [
     handle: 'TvTotal24bot',
     icon: 'Send',
     color: '#229ED9',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/tvtotal24/',
+    handle: '@tvtotal24',
+    icon: 'Instagram',
+    color: '#E4405F',
   },
 ];
 

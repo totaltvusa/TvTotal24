@@ -6,4 +6,4 @@ Disallow: /checkout/
 Disallow: /cart/
 Disallow: /my-account/
 
-Sitemap: https://totaltvusa.com/sitemap.xml
+Sitemap: https://tvtotal24.vercel.app/sitemap.xml
