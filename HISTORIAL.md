@@ -217,6 +217,28 @@ TvTotal24/
 
 ---
 
+### [2026-11-02] - Campaña de Email Marketing en HTML para Brevo y Assets Gráficos Oficiales
+
+#### 🚀 Acciones Realizadas:
+1. **Creación de la Plantilla de Email Marketing (`email_marketing_tvtotal24.html`):**
+   - Adaptación completa de la campaña publicitaria de valor y corte de cable para Brevo en español.
+   - Titular principal único: `DEJA DE PAGAR DEMÁS POR TU ENTRETENIMIENTO`.
+   - Mensaje introductorio directo y persuasivo destacando el costo excesivo del cable tradicional frente a TvTotal24 desde $8/mes.
+   - Eliminación de suposiciones de montos innecesarias y supresión del cuadro de gasto anual estimado.
+   - Tabla comparativa lado a lado con compatibilidad para *"Smart TV, FireStick, Roku, Celular, PC, etc."*.
+   - Oferta especial con Binance destacada a secas (sin binance pay), con descuento exclusivo a $5 USD/mes y $50 USD/año.
+   - Sección de prueba gratis sin mención de límites de tiempo (totalmente gratis).
+2. **Generación del Hero Banner Oficial en Español (`public/images/tvtotal24_value_banner.jpg`):**
+   - Retoque gráfico digital cinematográfico con tipografía: *"El Mejor Entretenimiento para tu Familia!"*.
+   - Alineación vertical milimétrica de iconos con sus respectivas etiquetas: *Canales Internacionales*, *Deportes en Vivo*, y *20.000 Contenidos / Películas y Series*.
+   - Logo ampliado de TvTotal24 en la barra inferior con lema *"| Disfruta Más. Paga Menos."*.
+   - Botón de llamada a la acción en verde neón con el texto exacto *"Pide tu Prueba ¡GRATIS! ›"*.
+   - Subida y disponibilidad inmediata en la CDN de GitHub para carga rápida en correos de Brevo.
+3. **Optimización del Logo de Cabecera para Email (`public/images/tvtotal24_logo.png`):**
+   - Generación de asset de alta resolución (240px de altura, 2.3x Retina) para despliegue nítido en el header de emails en Brevo.
+
+---
+
 ### [2026-10-17] - Actualización de Enlaces Directos a WhatsApp (+573009476271), Precios Unificados (3 Pantallas), Súper Descuento Binance y Logo Ampliado
 
 #### 🚀 Ajustes y Mejoras Implementadas:
