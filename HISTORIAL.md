@@ -226,7 +226,22 @@ TvTotal24/
     - **Identidad Visual de Telegram:** Integración del icono oficial de Telegram (`TelegramIcon`), gradiente distintivo en tonos celestes/azules (`from-[#0088cc] via-[#229ED9] to-[#29b6f6]`), sombreados de resplandor dinámicos (`shadow-[#229ED9]/50`), y píldora flotante con acentos celestes y punto pulsante (`bg-[#229ED9]`).
     - **Preservación Total del Drag & Drop Universal:** Mantenimiento íntegro de la arquitectura con la API de Pointer Events (`setPointerCapture`, discriminación de clic/tap vs. arrastre con umbral de 5px, clamping inteligente contra bordes de pantalla con 16px de margen y persistencia posicional tras soltar).
     - **Accesibilidad y Atributos:** Actualización de `aria-label`, `title` y soporte de teclado (`Enter` / `Space`) referenciando Telegram.
-    - Se preservan intactos todos los demás enlaces y menciones a WhatsApp en el resto de la web (prueba gratis, contratación de planes, FAQ, footer).
+
+25. **Migración Integral de Canales de Atención y Marca de WhatsApp a Telegram (`https://t.me/TvTotal24bot`):**
+    - Se sustituyó **en todos los casos** y en la totalidad del sitio web la comunicación por WhatsApp, estableciendo **Telegram** ([`https://t.me/TvTotal24bot`](https://t.me/TvTotal24bot)) como el canal oficial único de atención, solicitud de demostración, contratación y asistencia técnica.
+    - **Enlaces y Disparadores Globales:**
+      - Encabezado (*Header*): botón «Demo Gratis» hacia `TELEGRAM_LINKS.demo`.
+      - Héroe (*Hero*): botón «Solicitar Prueba Gratis» y credencial de garantía *"Activación guiada y directa por Telegram"*.
+      - Demostración (*FreeDemo*): textos informativos, lista de beneficios (*"Asistencia guiada de instalación paso a paso por Telegram"*) y CTA hacia Telegram.
+      - Planes y Precios (*Pricing*): botón *"Compra con descuento Binance"* y botones de suscripción *"Quiero este"* en las tarjetas de 1, 3, 6 y 12 meses conectados a Telegram.
+      - Dispositivos (*Devices*): botón *"Asistencia Técnica"* dirigido a Telegram.
+      - Preguntas Frecuentes (*FAQ*): actualización de respuestas (*"Solicítala directamente por Telegram"*), aviso de soporte y botón interactivo con diseño Telegram y enlace directo.
+      - Onboarding: Paso 02 actualizado a *"Recibe tus credenciales directamente por Telegram junto a nuestra guía sencilla y soporte paso a paso."*.
+      - Centro Legal (*LegalPage*): actualización en políticas de privacidad para contacto de soporte y derechos del titular vía Telegram.
+      - Pie de Página (*Footer*): tarjeta de contacto principal actualizada a **Telegram Oficial** (`@TvTotal24bot`), eliminación de tarjetas residuales de WhatsApp y enlace de demo gratuito hacia Telegram.
+      - Comunidad (*SocialSection*): grilla responsive centrada de dos columnas para Telegram e Instagram.
+      - Botón Flotante: formalización del componente `FloatingTelegram.tsx` y renderizado en `App.tsx`.
+      - Email Marketing: actualización de `email_marketing_tvtotal24.html` retirando el botón de WhatsApp y canalizando las demos por Telegram.
 
 ---
 

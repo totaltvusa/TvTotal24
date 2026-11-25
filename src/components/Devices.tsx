@@ -12,7 +12,7 @@ import {
   ChevronDown,
   type LucideIcon,
 } from 'lucide-react';
-import { DEVICE_CATEGORIES, WHATSAPP_LINKS } from '@/data';
+import { DEVICE_CATEGORIES, TELEGRAM_LINKS } from '@/data';
 
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
   Tv,
@@ -191,7 +191,7 @@ export default function Devices() {
                     </div>
                   </div>
                   <a
-                    href={WHATSAPP_LINKS.support}
+                    href={TELEGRAM_LINKS.support}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full btn-neon-green text-xs font-black uppercase tracking-wider shadow-neon-glow hover:scale-105 transition-all"

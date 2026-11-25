@@ -11,7 +11,7 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import SocialSection from '@/components/SocialSection';
 import Footer from '@/components/Footer';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import FloatingTelegram from '@/components/FloatingTelegram';
 import LegalPage from '@/components/LegalPage';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { Analytics } from '@vercel/analytics/react';
@@ -122,8 +122,8 @@ function AppContent() {
       {/* 11. Pie de Página */}
       <Footer onNavigateLegal={handleNavigateLegal} />
 
-      {/* Botón flotante directo a WhatsApp */}
-      <FloatingWhatsApp />
+      {/* Botón flotante directo a Telegram */}
+      <FloatingTelegram />
     </div>
   );
 }

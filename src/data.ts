@@ -19,29 +19,30 @@ export const NAV_LINKS = [
   { label: 'Preguntas Frecuentes', href: '#faq' },
 ];
 
-export const WHATSAPP_NUMBER = '13054229099';
-export const PHONE_DISPLAY = 'WhatsApp Oficial';
-export const PHONE_TEL = 'tel:+13054229099';
+export const TELEGRAM_URL = 'https://t.me/TvTotal24bot';
+export const TELEGRAM_BOT_HANDLE = '@TvTotal24bot';
 
-export const WHATSAPP_LINKS = {
-  general: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Deseo más información y soporte sobre el servicio.')}`,
-  demo: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero solicitar la prueba gratis.')}`,
-  support: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Necesito asistencia técnica con mi servicio.')}`,
-  raw: `https://wa.me/${WHATSAPP_NUMBER}`,
-  plan: (months: number) =>
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`quiero el plan de ${months} ${months === 1 ? 'mes' : 'meses'}`)}`,
+export const TELEGRAM_LINKS = {
+  general: TELEGRAM_URL,
+  demo: TELEGRAM_URL,
+  support: TELEGRAM_URL,
+  raw: TELEGRAM_URL,
+  binance: TELEGRAM_URL,
+  plan: (_months?: number) => TELEGRAM_URL,
 } as const;
 
+// Legacy alias to guarantee backwards compatibility
+export const WHATSAPP_LINKS = TELEGRAM_LINKS;
+
 export const CONTACT_EMAIL = 'email@tvtotal24.com';
-export const TELEGRAM_URL = 'https://t.me/TvTotal24bot';
 
 export const SOCIAL_LINKS = [
   {
-    name: 'WhatsApp',
-    url: `https://wa.me/${WHATSAPP_NUMBER}`,
-    handle: 'Atención 24/7',
-    icon: 'WhatsApp',
-    color: '#00E676',
+    name: 'Telegram',
+    url: TELEGRAM_URL,
+    handle: '@TvTotal24bot',
+    icon: 'Telegram',
+    color: '#229ED9',
   },
   {
     name: 'Instagram',
@@ -49,13 +50,6 @@ export const SOCIAL_LINKS = [
     handle: '@tvtotal24',
     icon: 'Instagram',
     color: '#E4405F',
-  },
-  {
-    name: 'Telegram',
-    url: 'https://t.me/TvTotal24bot',
-    handle: 'TvTotal24bot',
-    icon: 'Send',
-    color: '#229ED9',
   },
 ];
 
@@ -83,7 +77,7 @@ export const UNIVERSAL_PLAN_FEATURES: string[] = [
   'Torneos de fútbol, deportes y ligas internacionales',
   'Guía electrónica interactiva de programación (EPG)',
   'Servidores estables con tecnología anti-buffering',
-  'Activación rápida y soporte directo por WhatsApp',
+  'Activación rápida y soporte directo por Telegram',
   'Sin contratos obligatorios ni penalizaciones',
 ];
 
@@ -163,7 +157,7 @@ export const ONBOARDING_STEPS = [
   {
     number: '02',
     title: 'Recibe tus Credenciales',
-    description: 'En cuestión de minutos te enviamos tu usuario, contraseña y la guía paso a paso vía WhatsApp.',
+    description: 'En cuestión de minutos te enviamos tu usuario, contraseña y la guía paso a paso vía Telegram.',
     icon: 'Key',
   },
   {
@@ -215,8 +209,8 @@ export const CORE_FEATURES: Feature[] = [
   {
     icon: 'Bot',
     title: 'Soporte Directo y Asistencia Técnica',
-    description: 'Atención personalizada y rápida por WhatsApp para instalación, dudas y soporte.',
-    tag: 'SOPORTE WHATSAPP',
+    description: 'Atención personalizada y rápida por Telegram para instalación, dudas y soporte.',
+    tag: 'SOPORTE TELEGRAM',
   },
 ];
 
@@ -321,8 +315,8 @@ export const WHY_CHOOSE_US = [
     icon: 'Calendar',
   },
   {
-    title: 'Soporte Directo por WhatsApp',
-    description: 'Asistencia técnica personalizada y rápida a través de WhatsApp para resolver cualquier inquietud.',
+    title: 'Soporte Directo por Telegram',
+    description: 'Asistencia técnica personalizada y rápida a través de Telegram para resolver cualquier inquietud.',
     icon: 'MessageSquare',
   },
   {
@@ -455,7 +449,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mariana Gómez',
     location: 'Ciudad de México, México',
     rating: 5.0,
-    text: 'Mis hijos adoran las películas y series animadas. La instalación nos tomó menos de 5 minutos gracias a la asesoría por WhatsApp. Servicio 100% recomendado.',
+    text: 'Mis hijos adoran las películas y series animadas. La instalación nos tomó menos de 5 minutos gracias a la asesoría por Telegram. Servicio 100% recomendado.',
     device: 'Samsung Smart TV 55"',
     avatarText: 'MG',
   },
@@ -471,7 +465,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Lucía Fernández',
     location: 'Buenos Aires, Argentina',
     rating: 5.0,
-    text: 'Probé primero la prueba gratis y quedé encantada. La atención por WhatsApp fue muy rápida y el catálogo tiene más de 25.000 películas y series completas.',
+    text: 'Probé primero la prueba gratis y quedé encantada. La atención por Telegram fue muy rápida y el catálogo tiene más de 25.000 películas y series completas.',
     device: 'Chromecast con Google TV',
     avatarText: 'LF',
   },
@@ -492,7 +486,7 @@ export const FAQS = [
   },
   {
     question: '¿Puedo solicitar una prueba gratis antes de comprar?',
-    answer: '¡Por supuesto! Ofrecemos una prueba gratis para que compruebes la calidad de imagen, velocidad y catálogo en tu propio dispositivo antes de elegir un plan. Solicítala directamente por WhatsApp.',
+    answer: '¡Por supuesto! Ofrecemos una prueba gratis para que compruebes la calidad de imagen, velocidad y catálogo en tu propio dispositivo antes de elegir un plan. Solicítala directamente por Telegram.',
   },
   {
     question: '¿Cuántos dispositivos puedo conectar al mismo tiempo?',

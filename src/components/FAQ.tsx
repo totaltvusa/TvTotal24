@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle, Sparkles, MessageCircle, Mail } from 'lucide-react';
-import { FAQ_ITEMS, WHATSAPP_LINKS, CONTACT_EMAIL } from '@/data';
+import { ChevronDown, HelpCircle, Sparkles, Send, Mail } from 'lucide-react';
+import { FAQ_ITEMS, TELEGRAM_LINKS, CONTACT_EMAIL } from '@/data';
 
 export default function FAQ() {
   const [expanded, setExpanded] = useState(false);
@@ -122,14 +122,14 @@ export default function FAQ() {
                 })}
               </div>
 
-              {/* Need more help CTA: WHATSAPP & EMAIL */}
+              {/* Need more help CTA: TELEGRAM & EMAIL */}
               <div className="mt-10 p-6 rounded-2xl glass border border-slate-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
                 <div>
                   <h4 className="font-display font-bold text-base text-slate-900 dark:text-white">
                     ¿Tienes alguna duda o necesitas asistencia técnica?
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Nuestro equipo responde directamente por WhatsApp y en{' '}
+                    Nuestro equipo responde directamente por Telegram y en{' '}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
                       className="text-emerald-600 dark:text-neon-emerald font-semibold hover:underline"
@@ -140,13 +140,13 @@ export default function FAQ() {
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
                   <a
-                    href={WHATSAPP_LINKS.support}
+                    href={TELEGRAM_LINKS.support}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-neon-emerald to-emerald-500 text-obsidian-950 font-black text-xs sm:text-sm shadow-neon-glow hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#0088cc] via-[#229ED9] to-[#29b6f6] text-white font-black text-xs sm:text-sm shadow-md hover:shadow-[0_0_20px_rgba(34,158,217,0.5)] hover:scale-105 transition-all"
                   >
-                    <MessageCircle size={15} />
-                    <span>WhatsApp</span>
+                    <Send size={15} />
+                    <span>Telegram</span>
                   </a>
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}

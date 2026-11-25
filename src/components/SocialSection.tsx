@@ -2,13 +2,11 @@ import { motion } from 'framer-motion';
 import { Sparkles, ExternalLink } from 'lucide-react';
 import { SOCIAL_LINKS } from '@/data';
 import {
-  WhatsAppIcon,
   InstagramIcon,
   TelegramIcon,
 } from './SocialIcons';
 
 const ICON_COMPONENTS = {
-  WhatsApp: WhatsAppIcon,
   Instagram: InstagramIcon,
   Send: TelegramIcon,
   Telegram: TelegramIcon,
@@ -40,10 +38,10 @@ export default function SocialSection() {
           </p>
         </motion.div>
 
-        {/* 3 Social Cards Grid (WhatsApp, Instagram, Telegram) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        {/* Social Cards Grid (Telegram, Instagram) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {SOCIAL_LINKS.map((item, idx) => {
-            const Icon = ICON_COMPONENTS[item.icon as keyof typeof ICON_COMPONENTS] || WhatsAppIcon;
+            const Icon = ICON_COMPONENTS[item.icon as keyof typeof ICON_COMPONENTS] || TelegramIcon;
             return (
               <motion.a
                 key={item.name}

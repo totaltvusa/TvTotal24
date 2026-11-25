@@ -2,10 +2,11 @@ import { ShieldCheck, Sparkles, MessageCircle, Mail } from 'lucide-react';
 import {
   LOGO_URL,
   NAV_LINKS,
-  WHATSAPP_LINKS,
+  TELEGRAM_LINKS,
+  TELEGRAM_URL,
   CONTACT_EMAIL,
 } from '@/data';
-import { WhatsAppIcon, TelegramIcon, InstagramIcon } from './SocialIcons';
+import { TelegramIcon, InstagramIcon } from './SocialIcons';
 
 interface FooterProps {
   onNavigateLegal?: (section: 'privacy' | 'terms' | 'dmca') => void;
@@ -76,19 +77,19 @@ export default function Footer({ onNavigateLegal }: FooterProps = {}) {
               Atención y Asistencia Técnica
             </h4>
             <div className="space-y-3">
-              {/* WhatsApp link */}
+              {/* Telegram link */}
               <a
-                href={WHATSAPP_LINKS.general}
+                href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass border border-emerald-500/30 dark:border-neon-emerald/30 text-sm font-semibold text-slate-800 dark:text-white hover:bg-emerald-500/10 dark:hover:bg-neon-emerald/10 shadow-sm transition-all"
+                className="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass border border-[#229ED9]/30 text-sm font-semibold text-slate-800 dark:text-white hover:bg-[#229ED9]/10 shadow-sm transition-all"
               >
-                <div className="w-8 h-8 rounded-xl bg-emerald-500/20 dark:bg-neon-emerald/20 flex items-center justify-center text-emerald-600 dark:text-neon-emerald">
-                  <WhatsAppIcon size={18} />
+                <div className="w-8 h-8 rounded-xl bg-[#229ED9]/20 flex items-center justify-center text-[#229ED9]">
+                  <TelegramIcon size={18} />
                 </div>
                 <div>
-                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">WhatsApp Oficial</div>
-                  <div className="text-xs font-bold text-slate-900 dark:text-white">Chat y Atención 24/7</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Telegram Oficial</div>
+                  <div className="text-xs font-bold text-slate-900 dark:text-white">Atención y Soporte 24/7</div>
                 </div>
               </a>
 
@@ -103,22 +104,6 @@ export default function Footer({ onNavigateLegal }: FooterProps = {}) {
                 <div>
                   <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Correo Electrónico</div>
                   <div className="text-xs font-bold text-slate-900 dark:text-white">{CONTACT_EMAIL}</div>
-                </div>
-              </a>
-
-              {/* Telegram link */}
-              <a
-                href="https://t.me/TvTotal24bot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-2.5 rounded-2xl glass border border-[#229ED9]/30 text-sm font-semibold text-slate-800 dark:text-white hover:bg-[#229ED9]/10 shadow-sm transition-all"
-              >
-                <div className="w-8 h-8 rounded-xl bg-[#229ED9]/20 flex items-center justify-center text-[#229ED9]">
-                  <TelegramIcon size={18} />
-                </div>
-                <div>
-                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Telegram Bot</div>
-                  <div className="text-xs font-bold text-slate-900 dark:text-white">TvTotal24bot</div>
                 </div>
               </a>
 
@@ -138,14 +123,14 @@ export default function Footer({ onNavigateLegal }: FooterProps = {}) {
                 </div>
               </a>
 
-              {/* Free demo badge trigger: DIRECT TO WHATSAPP */}
+              {/* Free demo badge trigger: DIRECT TO TELEGRAM */}
               <a
-                href={WHATSAPP_LINKS.demo}
+                href={TELEGRAM_LINKS.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center py-3 px-4 rounded-xl bg-emerald-500/15 dark:bg-neon-emerald/15 hover:bg-emerald-500/25 dark:hover:bg-neon-emerald/25 border border-emerald-500/40 dark:border-neon-emerald/40 hover:border-emerald-500/70 dark:hover:border-neon-emerald/70 text-xs font-black text-emerald-700 dark:text-neon-emerald transition-all flex items-center justify-center gap-2 mt-2 shadow-sm"
+                className="w-full text-center py-3 px-4 rounded-xl bg-gradient-to-r from-[#0088cc] via-[#229ED9] to-[#29b6f6] text-white hover:opacity-95 text-xs font-black transition-all flex items-center justify-center gap-2 mt-2 shadow-sm"
               >
-                <MessageCircle size={15} />
+                <Sparkles size={15} />
                 Solicitar Prueba Gratis →
               </a>
             </div>

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { TELEGRAM_URL } from '@/data';
 import { TelegramIcon } from './SocialIcons';
 
-export default function FloatingWhatsApp() {
+export default function FloatingTelegram() {
   const [offset, setOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
 

@@ -10,7 +10,7 @@ import {
   ShieldCheck,
   Zap,
 } from 'lucide-react';
-import { HERO_IMAGE, LOGO_URL, WHATSAPP_LINKS } from '@/data';
+import { HERO_IMAGE, LOGO_URL, TELEGRAM_LINKS } from '@/data';
 import DynamicHeroCarousel from './DynamicHeroCarousel';
 
 const TRUST_STATS = [
@@ -206,7 +206,7 @@ export default function Hero() {
             Disfruta de más de 5.000 canales de televisión en vivo, los mejores eventos deportivos y más de 25.000 títulos en películas y series completas on-demand. Todos nuestros planes incluyen 3 pantallas simultáneas.
           </motion.p>
 
-          {/* CTAs DIRECTOS A WHATSAPP */}
+          {/* CTAs DIRECTOS A TELEGRAM */}
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -222,7 +222,7 @@ export default function Hero() {
             </a>
 
             <a
-              href={WHATSAPP_LINKS.demo}
+              href={TELEGRAM_LINKS.demo}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full glass border border-slate-300 dark:border-neon-electric/40 text-slate-800 dark:text-slate-100 font-bold text-sm sm:text-base hover:text-emerald-700 dark:hover:text-white hover:border-emerald-500/60 dark:hover:border-neon-electric hover:bg-emerald-50 dark:hover:bg-neon-electric/15 transition-all duration-300 shadow-sm dark:shadow-lg group"
@@ -249,7 +249,7 @@ export default function Hero() {
             </span>
             <span className="flex items-center gap-1.5">
               <Tv size={14} className="text-neon-electric" />
-              Activación guiada y directa por WhatsApp
+              Activación guiada y directa por Telegram
             </span>
           </motion.div>
 

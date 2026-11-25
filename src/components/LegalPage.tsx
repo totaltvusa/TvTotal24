@@ -170,7 +170,7 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
               Cuando interactúas con TvTotal24 (por ejemplo al solicitar una prueba gratuita, suscribirte a un plan o solicitar soporte técnico), podemos recopilar únicamente la información indispensable para el servicio:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-slate-700 dark:text-slate-300">
-              <li><strong>Datos de Contacto:</strong> Número de teléfono de WhatsApp, usuario de Telegram o correo electrónico utilizado para la comunicación.</li>
+              <li><strong>Datos de Contacto:</strong> Usuario de Telegram o correo electrónico utilizado para la comunicación.</li>
               <li><strong>Detalles del Plan:</strong> Duración de la suscripción seleccionada (1, 3, 6 o 12 meses, todos con 3 pantallas simultáneas) e identificador de confirmación de pago.</li>
               <li><strong>Datos Técnicos de Diagnóstico:</strong> Modelo de dispositivo o aplicación reproductora utilizada (p. ej. Fire TV Stick, Smart TV, TiviMate, Android TV) con el único objetivo de orientarte durante la instalación.</li>
             </ul>
@@ -198,7 +198,7 @@ export default function LegalPage({ initialSection = 'privacy', onNavigateHome }
               4. Tus Derechos de Privacidad
             </h3>
             <p>
-              Tienes el derecho de solicitar el acceso a los datos de contacto asociados a tu cuenta o la supresión de tu historial de mensajería al finalizar tu ciclo de suscripción. Para optar por no recibir notificaciones de renovación o promociones, solo indícalo a nuestro equipo de atención por WhatsApp o enviando un mensaje a <a href={`mailto:${CONTACT_EMAIL}`} className="text-emerald-600 dark:text-neon-emerald font-semibold hover:underline">{CONTACT_EMAIL}</a>.
+              Tienes el derecho de solicitar el acceso a los datos de contacto asociados a tu cuenta o la supresión de tu historial de mensajería al finalizar tu ciclo de suscripción. Para optar por no recibir notificaciones de renovación o promociones, solo indícalo a nuestro equipo de atención por Telegram o enviando un mensaje a <a href={`mailto:${CONTACT_EMAIL}`} className="text-emerald-600 dark:text-neon-emerald font-semibold hover:underline">{CONTACT_EMAIL}</a>.
             </p>
           </div>
         </section>

@@ -9,7 +9,7 @@ import {
   Coins,
   ShieldCheck,
 } from 'lucide-react';
-import { PRICING_PLANS, WHATSAPP_LINKS, WHATSAPP_NUMBER } from '@/data';
+import { PRICING_PLANS, TELEGRAM_LINKS } from '@/data';
 
 export default function Pricing() {
   return (
@@ -70,7 +70,7 @@ export default function Pricing() {
           </div>
 
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Quiero comprar mi plan con descuento Binance.')}`}
+            href={TELEGRAM_LINKS.binance}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-obsidian-950 font-black text-xs sm:text-sm uppercase tracking-wide hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)]"
@@ -167,9 +167,9 @@ export default function Pricing() {
                   </ul>
                 </div>
 
-                {/* Direct WhatsApp Subscription Button */}
+                {/* Direct Telegram Subscription Button */}
                 <a
-                  href={WHATSAPP_LINKS.plan(plan.durationMonths)}
+                  href={TELEGRAM_LINKS.plan(plan.durationMonths)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-md ${

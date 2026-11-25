@@ -5,7 +5,7 @@ import {
   Tv,
   MessageCircle,
 } from 'lucide-react';
-import { TRIAL_IMAGE, WHATSAPP_LINKS } from '@/data';
+import { TRIAL_IMAGE, TELEGRAM_LINKS } from '@/data';
 
 export default function FreeDemo() {
   return (
@@ -61,7 +61,7 @@ export default function FreeDemo() {
               </h2>
 
               <p className="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                Prueba nuestra grilla de más de 5.000 canales de televisión en vivo, películas de estreno, series y eventos deportivos en tu propio dispositivo antes de contratar. Te entregamos tus credenciales de prueba directamente por WhatsApp.
+                Prueba nuestra grilla de más de 5.000 canales de televisión en vivo, películas de estreno, series y eventos deportivos en tu propio dispositivo antes de contratar. Te entregamos tus credenciales de prueba directamente por Telegram.
               </p>
 
               {/* Benefits Checklist */}
@@ -80,14 +80,14 @@ export default function FreeDemo() {
                 </div>
                 <div className="flex items-center gap-2.5 text-sm text-slate-700 dark:text-slate-200 justify-center lg:justify-start">
                   <CheckCircle2 size={17} className="text-neon-electric shrink-0" />
-                  <span>Asistencia guiada de instalación paso a paso por WhatsApp</span>
+                  <span>Asistencia guiada de instalación paso a paso por Telegram</span>
                 </div>
               </div>
 
-              {/* Action CTAs: DIRECT TO WHATSAPP */}
+              {/* Action CTAs: DIRECT TO TELEGRAM */}
               <div className="mt-8 flex flex-col sm:flex-row gap-3.5 justify-center lg:justify-start items-center">
                 <a
-                  href={WHATSAPP_LINKS.demo}
+                  href={TELEGRAM_LINKS.demo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full btn-neon-green text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all duration-300 shadow-neon-glow hover:scale-105"

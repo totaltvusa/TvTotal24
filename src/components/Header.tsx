@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from 'lucide-react';
-import { NAV_LINKS, LOGO_URL, WHATSAPP_LINKS } from '@/data';
+import { NAV_LINKS, LOGO_URL, TELEGRAM_LINKS } from '@/data';
 import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
@@ -58,9 +58,9 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
 
-            {/* Demo Gratis directo a WhatsApp */}
+            {/* Demo Gratis directo a Telegram */}
             <a
-              href={WHATSAPP_LINKS.demo}
+              href={TELEGRAM_LINKS.demo}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full btn-neon-green text-xs font-black tracking-wide uppercase transition-all shadow-neon-glow hover:scale-105"
@@ -108,7 +108,7 @@ export default function Header() {
                 ))}
                 <div className="pt-3 border-t border-slate-200 dark:border-white/10 mt-1 flex flex-col gap-2">
                   <a
-                    href={WHATSAPP_LINKS.demo}
+                    href={TELEGRAM_LINKS.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileOpen(false)}

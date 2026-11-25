@@ -15,7 +15,7 @@ const SETUP_STEPS = [
     step: '02',
     title: 'Activa en Minutos',
     description:
-      'Recibe tus credenciales directamente por WhatsApp junto a nuestra guía sencilla y soporte paso a paso.',
+      'Recibe tus credenciales directamente por Telegram junto a nuestra guía sencilla y soporte paso a paso.',
   },
   {
     icon: Rocket,
