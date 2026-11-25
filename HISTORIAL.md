@@ -215,6 +215,12 @@ TvTotal24/
     - **Centro Legal y DMCA:** Actualizada la dirección formal del agente designado DMCA y apartado de derechos de privacidad.
     - **Sección Comunidad:** Se preserva exclusivamente para redes sociales (WhatsApp, Instagram, Telegram).
 
+23. **Actualización del Número Oficial de WhatsApp (+1 305 422 9099):**
+    - Se actualizó el número central de atención de WhatsApp a `13054229099` (`+1 305 422 9099`).
+    - Todos los enlaces interactivos (`https://wa.me/13054229099`) y llamadas telefónicas (`tel:+13054229099`) ahora dirigen al nuevo número.
+    - Se mantienen exactamente idénticos todos los mensajes preelaborados de prueba gratis, contratación por tiempo de suscripción, consulta de descuento Binance y asistencia técnica.
+    - El número no se expone en texto plano, preservando el diseño limpio (*WhatsApp Oficial*, *Chat y Atención 24/7*).
+
 ---
 
 ### [2026-11-02] - Campaña de Email Marketing en HTML para Brevo y Assets Gráficos Oficiales

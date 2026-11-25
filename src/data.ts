@@ -19,9 +19,9 @@ export const NAV_LINKS = [
   { label: 'Preguntas Frecuentes', href: '#faq' },
 ];
 
-export const WHATSAPP_NUMBER = '573009476271';
+export const WHATSAPP_NUMBER = '13054229099';
 export const PHONE_DISPLAY = 'WhatsApp Oficial';
-export const PHONE_TEL = 'tel:+573009476271';
+export const PHONE_TEL = 'tel:+13054229099';
 
 export const WHATSAPP_LINKS = {
   general: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola TvTotal24! Deseo más información y soporte sobre el servicio.')}`,
