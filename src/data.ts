@@ -33,6 +33,7 @@ export const WHATSAPP_LINKS = {
 } as const;
 
 export const CONTACT_EMAIL = 'email@tvtotal24.com';
+export const TELEGRAM_URL = 'https://t.me/TvTotal24bot';
 
 export const SOCIAL_LINKS = [
   {

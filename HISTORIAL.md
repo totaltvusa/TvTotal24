@@ -221,6 +221,13 @@ TvTotal24/
     - Se mantienen exactamente idénticos todos los mensajes preelaborados de prueba gratis, contratación por tiempo de suscripción, consulta de descuento Binance y asistencia técnica.
     - El número no se expone en texto plano, preservando el diseño limpio (*WhatsApp Oficial*, *Chat y Atención 24/7*).
 
+24. **Transición del Botón Flotante de Chat a Telegram (`https://t.me/TvTotal24bot`):**
+    - Se adaptó el botón flotante arrastrable de chat («¿Dudas? Chatea con nosotros») para canalizar la atención en tiempo real a través de **Telegram** oficial ([`https://t.me/TvTotal24bot`](https://t.me/TvTotal24bot)).
+    - **Identidad Visual de Telegram:** Integración del icono oficial de Telegram (`TelegramIcon`), gradiente distintivo en tonos celestes/azules (`from-[#0088cc] via-[#229ED9] to-[#29b6f6]`), sombreados de resplandor dinámicos (`shadow-[#229ED9]/50`), y píldora flotante con acentos celestes y punto pulsante (`bg-[#229ED9]`).
+    - **Preservación Total del Drag & Drop Universal:** Mantenimiento íntegro de la arquitectura con la API de Pointer Events (`setPointerCapture`, discriminación de clic/tap vs. arrastre con umbral de 5px, clamping inteligente contra bordes de pantalla con 16px de margen y persistencia posicional tras soltar).
+    - **Accesibilidad y Atributos:** Actualización de `aria-label`, `title` y soporte de teclado (`Enter` / `Space`) referenciando Telegram.
+    - Se preservan intactos todos los demás enlaces y menciones a WhatsApp en el resto de la web (prueba gratis, contratación de planes, FAQ, footer).
+
 ---
 
 ### [2026-11-02] - Campaña de Email Marketing en HTML para Brevo y Assets Gráficos Oficiales

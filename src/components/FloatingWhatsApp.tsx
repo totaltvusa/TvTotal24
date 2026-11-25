@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { WHATSAPP_LINKS } from '@/data';
-import { WhatsAppIcon } from './SocialIcons';
+import { TELEGRAM_URL } from '@/data';
+import { TelegramIcon } from './SocialIcons';
 
 export default function FloatingWhatsApp() {
   const [offset, setOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -96,9 +96,9 @@ export default function FloatingWhatsApp() {
         // Drag movement finished, stay exactly where the user placed it
         setTimeout(() => setIsDragging(false), 50);
       } else {
-        // Clean tap/click without drag: open WhatsApp
+        // Clean tap/click without drag: open Telegram
         setIsDragging(false);
-        window.open(WHATSAPP_LINKS.general, '_blank', 'noopener,noreferrer');
+        window.open(TELEGRAM_URL, '_blank', 'noopener,noreferrer');
       }
     }
   };
@@ -151,35 +151,35 @@ export default function FloatingWhatsApp() {
       className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 select-none ${
         isDragging ? 'cursor-grabbing scale-105' : 'cursor-grab hover:scale-102'
       } transition-transform duration-75`}
-      title="¿Dudas? Chatea con nosotros por WhatsApp (Arrastra para mover)"
+      title="¿Dudas? Chatea con nosotros por Telegram (Arrastra para mover)"
       role="button"
       tabIndex={0}
-      aria-label="Chatea con nosotros por WhatsApp. Puedes mover este botón arrastrándolo."
+      aria-label="Chatea con nosotros por Telegram. Puedes mover este botón arrastrándolo."
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          window.open(WHATSAPP_LINKS.general, '_blank', 'noopener,noreferrer');
+          window.open(TELEGRAM_URL, '_blank', 'noopener,noreferrer');
         }
       }}
     >
       {/* Floating Pill Label */}
       <div
-        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-emerald-500/40 dark:border-neon-electric/40 text-xs font-bold text-slate-800 dark:text-white shadow-2xl hover:border-emerald-500 dark:hover:border-neon-electric hover:shadow-neon-glow transition-all backdrop-blur-xl group pointer-events-none select-none"
+        className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-[#229ED9]/40 dark:border-[#229ED9]/50 text-xs font-bold text-slate-800 dark:text-white shadow-2xl hover:border-[#229ED9] hover:shadow-[0_0_20px_rgba(34,158,217,0.35)] transition-all backdrop-blur-xl group pointer-events-none select-none"
       >
-        <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-neon-electric animate-pulse" />
-        <span className="group-hover:text-emerald-600 dark:group-hover:text-neon-electric transition-colors select-none">
+        <span className="w-2 h-2 rounded-full bg-[#229ED9] animate-pulse" />
+        <span className="group-hover:text-[#229ED9] transition-colors select-none">
           ¿Dudas? Chatea con nosotros
         </span>
       </div>
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Floating Telegram Action Button */}
       <div
-        className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#00c853] to-[#00e676] text-obsidian-950 flex items-center justify-center shadow-2xl shadow-neon-electric/50 border-2 border-white/50 hover:shadow-neon-glow transition-all duration-300 pointer-events-none select-none"
+        className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#0088cc] via-[#229ED9] to-[#29b6f6] text-white flex items-center justify-center shadow-2xl shadow-[#229ED9]/50 border-2 border-white/50 hover:shadow-[0_0_25px_rgba(34,158,217,0.65)] transition-all duration-300 pointer-events-none select-none"
       >
-        <WhatsAppIcon size={32} className="text-obsidian-950 pointer-events-none" />
+        <TelegramIcon size={30} className="text-white pointer-events-none -translate-x-0.5" />
         <span className="absolute -top-1 -right-1 flex h-4 w-4 pointer-events-none">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-electric opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-400 border-2 border-obsidian-950"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#29b6f6] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-4 w-4 bg-[#229ED9] border-2 border-obsidian-950"></span>
         </span>
       </div>
     </div>
